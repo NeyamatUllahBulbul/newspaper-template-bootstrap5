@@ -13,20 +13,18 @@
     <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./assets/plugins/fontawesome/css/all.css" rel="stylesheet">
     <link href="assets/plugins/css/style.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="./assets/plugins/css/offcanvas.css" rel="stylesheet">
 </head>
 <body class="bg-light">
-
-<!-- Header-->
+    <!-- Header-->
     <header class="mt-2 mt-md-3">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-xs-12 d-flex justify-content-center justify-content-md-start position-relative">
-                    <button class="navbar-toggler p-3 border-0 d-md-none float-start position-absolute start-0 top-1" type="button" id="navbarSideCollapse">
+                    <!--Mobile menu opener-->
+                    <button class="navbar-toggler p-3 border-0 d-md-none float-start position-absolute start-0 top-1" type="button" id="navbarSideCollapse" onclick="openNav()">
                         <i class="fa fa-bars fa-xl"></i>
                     </button>
+                    <!--Mobile menu opener end-->
                     <a href="">
                         <img class="site-logo" src="https://www.dhakaprokash24.com/media/common/logo1637849341.png">
                     </a>
@@ -60,7 +58,7 @@
                     </a>
                 </div>
                 <div class="col-md-2 d-none d-md-flex justify-content-center align-items-center">
-                    <a class="btn" href="https://www.linkedin.com/company/dhakaprokash" target="_blank">
+                    <a class="btn archive-icon" href="" target="_blank">
                         <small style="display: block;">
                             <i class="fas fa-coins"></i> আর্কাইভ
                         </small>
@@ -69,167 +67,157 @@
             </div>
         </div>
     </header>
-<!--End Header-->
-<nav class="navbar navbar-expand d-none d-md-block bg-success">
-    <div class="container">
-        <a class="navbar-brand" href="#">Container</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <!--End Header-->
 
-        <div class="collapse navbar-collapse" id="navbarsExample07">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown07">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-md-0">
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+    <!--Nav desktop start-->
+    <nav class="navbar navbar-expand d-none d-md-block bg-custom-primary sticky-top py-0">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarLinks">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item nav-active">
+                        <a class="nav-link text-white" href="#">
+                            <i class="fa fa-home-alt" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">ক্যাটাগরি <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">বিস্তারিত</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">খেলাধুলা</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">বিনোদন</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">লাইফস্টাইল</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">তথ্যপ্রযুক্তি</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white d-flex align-items-center" href="#" onclick="open_mega_menu('navExtension')">
+                            সকল<i class="fa fa-caret-down m-lg-2"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <form class="form-inline float-end search-form" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="অনুসন্ধান করতে লিখুন" aria-label="Username" aria-describedby="basic-addon1">
+                    <button class="btn btn-light text-secondary border-start btn-sm" type="submit">খুজুন</button>
+                </div>
             </form>
         </div>
+    </nav>
+
+    <div class="nav-extension py-4 w-100 bg-custom-primary-dark" id="navExtension" style="display: none">
+        <div class="container">
+            <div class="row nav-other-contents">
+                <div class="col-sm-2">
+                    <a href="">জাতীয়</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="">জাতীয়</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="">জাতীয়</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="">জাতীয়</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="">জাতীয়</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="">জাতীয়</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="#">জাতীয়</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="#">জাতীয়</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="#">জাতীয়</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="#">জাতীয়</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="#">জাতীয়</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="#">জাতীয়</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="#">জাতীয়</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="#">জাতীয়</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="#">জাতীয়</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="#">জাতীয়</a>
+                </div>
+            </div>
+        </div>
     </div>
-</nav>
+    <!--Nav desktop End-->
+
+    <!--Nav mobile start-->
+    <div id="navBackdrop" class="position-fixed top-0 start-0" style="background-color: rgba(0,0,0,0.3); width: 100%; height: 100%; display: none;">
+        <button class="navbar-toggler p-3 border-0 closebtn" onclick="closeNav()">
+            <i class="fa fa-close fa-sm "></i>
+        </button>
+    </div>
+    <div id="mobileMenu" class="sidenav bg-white">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <!--Nav mobile End-->
 
     <main class="container">
-        <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
-            <img class="me-3" src="./assets/brand/bootstrap-logo-white.svg" alt="" width="48" height="38">
-            <div class="lh-1">
-                <h1 class="h6 mb-0 text-white lh-1">Bootstrap</h1>
-                <small>Since 2011</small>
-            </div>
-        </div>
+        <p>
 
-        <form class="form-inline" role="search">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                <button class="btn btn-outline-success" type="submit">খুজুন</button>
-            </div>
-        </form>
+            What is Lorem Ipsum?
 
-        <div class="my-3 p-3 bg-body rounded shadow-sm">
-            <h6 class="border-bottom pb-2 mb-0">Recent updates</h6>
-            <div class="d-flex text-muted pt-3">
-                <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
-                     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32"
-                     preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#007bff"/>
-                    <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
-                </svg>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Why do we use it?
 
-                <p class="pb-3 mb-0 small lh-sm border-bottom">
-                    <strong class="d-block text-gray-dark">@username</strong>
-                    Some representative placeholder content, with some information about this user. Imagine this being some
-                    sort of status update, perhaps?
-                </p>
-            </div>
-            <div class="d-flex text-muted pt-3">
-                <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
-                     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32"
-                     preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#e83e8c"/>
-                    <text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text>
-                </svg>
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
-                <p class="pb-3 mb-0 small lh-sm border-bottom">
-                    <strong class="d-block text-gray-dark">@username</strong>
-                    Some more representative placeholder content, related to this other user. Another status update,
-                    perhaps.
-                </p>
-            </div>
-            <div class="d-flex text-muted pt-3">
-                <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
-                     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32"
-                     preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#6f42c1"/>
-                    <text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text>
-                </svg>
+            Where does it come from?
 
-                <p class="pb-3 mb-0 small lh-sm border-bottom">
-                    <strong class="d-block text-gray-dark">@username</strong>
-                    This user also gets some representative placeholder content. Maybe they did something interesting, and
-                    you really want to highlight this in the recent updates.
-                </p>
-            </div>
-            <small class="d-block text-end mt-3">
-                <a href="#">All updates</a>
-            </small>
-        </div>
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
 
-        <div class="my-3 p-3 bg-body rounded shadow-sm">
-            <h6 class="border-bottom pb-2 mb-0">Suggestions</h6>
-            <div class="d-flex text-muted pt-3">
-                <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
-                     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32"
-                     preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#007bff"/>
-                    <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
-                </svg>
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English
 
-                <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
-                    <div class="d-flex justify-content-between">
-                        <strong class="text-gray-dark">Full Name</strong>
-                        <a href="#">Follow</a>
-                    </div>
-                    <span class="d-block">@username</span>
-                </div>
-            </div>
-            <div class="d-flex text-muted pt-3">
-                <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
-                     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32"
-                     preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#007bff"/>
-                    <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
-                </svg>
+            What is Lorem Ipsum?
 
-                <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
-                    <div class="d-flex justify-content-between">
-                        <strong class="text-gray-dark">Full Name</strong>
-                        <a href="#">Follow</a>
-                    </div>
-                    <span class="d-block">@username</span>
-                </div>
-            </div>
-            <div class="d-flex text-muted pt-3">
-                <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
-                     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32"
-                     preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#007bff"/>
-                    <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
-                </svg>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Why do we use it?
 
-                <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
-                    <div class="d-flex justify-content-between">
-                        <strong class="text-gray-dark">Full Name</strong>
-                        <a href="#">Follow</a>
-                    </div>
-                    <span class="d-block">@username</span>
-                </div>
-            </div>
-            <small class="d-block text-end mt-3">
-                <a href="#">All suggestions</a>
-            </small>
-        </div>
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+            Where does it come from?
+
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English
+        </p>
     </main>
 
 <!--Scripts-->
 <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
 <link href="./assets/plugins/fontawesome/js/all.js" rel="stylesheet">
 <script src="./assets/plugins/js/index.js"></script>
-<script src="./assets/plugins/js/offcanvas.js"></script>
 <!--Scripts End-->
 </body>
 </html>

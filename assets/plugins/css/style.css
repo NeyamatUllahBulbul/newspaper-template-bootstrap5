@@ -1,3 +1,15 @@
+.bg-custom-primary {
+    background-color: #016938!important;
+}
+
+.bg-custom-primary-dark {
+    background-color: #0c4128;
+}
+
+.bg-custom-secondary {
+    background-color: #C6F6D1!important;
+}
+
 .site-logo {
     width:300px;
     padding: 15px 0;
@@ -15,23 +27,37 @@
     }
 }
 
-.b-example-divider {
-    height: 3rem;
-    background-color: rgba(0, 0, 0, .1);
-    border: solid rgba(0, 0, 0, .15);
-    border-width: 1px 0;
-    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+.search-form .input-group input, button {
+    max-height: 30px!important;
+    font-size: small;
 }
 
-.b-example-vr {
-    flex-shrink: 0;
-    width: 1.5rem;
-    height: 100vh;
+#navbarLinks ul {
+    height: 50px;
 }
 
-.bi {
-    vertical-align: -.125em;
-    fill: currentColor;
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    background-color: #016938 ;
+    -webkit-transition: background-color 1s;
+    -moz-transition:    background-color 1s;
+    -ms-transition:     background-color 1s;
+    -o-transition:      background-color 1s;
+    transition:         background-color 1s;
+}
+
+.nav-item:hover {
+    background-color: #0c4128;
+    border-bottom: solid 3px white;
+}
+
+.nav-active {
+    background-color: #0c4128;
+    border-bottom: solid 3px white;
 }
 
 .nav-scroller {
@@ -50,4 +76,82 @@
     text-align: center;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
+}
+
+#navbarLinks {
+    width: calc(100% - 256px);
+    overflow: hidden;
+    margin-right: 35px;
+}
+
+.nav-other-contents .col-sm-2 {
+    margin-bottom: 20px;
+}
+
+.nav-other-contents .col-sm-2 a {
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+    transform: translateX(20px); /* put the value you want here */
+}
+
+.nav-other-contents .col-sm-2 a:hover{
+    color: red;
+    transform: translateX(0);
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 57px;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 30px;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    left: -9px;
+    font-size: 36px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.facebook-icon:hover {
+    color: #0a53be;
+}
+
+.twitter-icon:hover {
+    color: #1DA1F2;
+}
+
+.youtube-icon:hover {
+    color: #c4302b;
+}
+
+.instagram-icon:hover {
+    color: #8a3ab9;
+}
+
+.linkedin-icon:hover {
+    color: #0e76a8;
+}
+
+.archive-icon:hover {
+    color: #0c4128;
 }
