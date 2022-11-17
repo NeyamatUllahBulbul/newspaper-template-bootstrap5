@@ -1,3 +1,5 @@
+let isMegaMenuOpen = false;
+
 function openNav() {
     console.log(window.innerWidth)
     document.getElementById("mobileMenu").style.width = `290px`;
@@ -14,9 +16,18 @@ function closeNav() {
 function open_mega_menu(data) {
     document.getElementById(data).style.display = "flex";
     document.getElementById(data).style.opacity = "1";
+    isMegaMenuOpen = true;
 }
 function close_mega_menu(data) {
-    document.getElementById(data).style.visibility = "hidden";
+    document.getElementById(data).style.display = "none";
     document.getElementById(data).style.opacity = "0";
-    document.getElementById("overlay").style.display = "none";
+    isMegaMenuOpen = false;
+}
+
+function manage_mega_menu (data) {
+    if (isMegaMenuOpen) {
+        close_mega_menu(data);
+    } else {
+        open_mega_menu(data);
+    }
 }

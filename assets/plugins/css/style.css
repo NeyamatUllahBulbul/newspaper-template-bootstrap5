@@ -27,11 +27,6 @@
     }
 }
 
-.search-form .input-group input, button {
-    max-height: 30px!important;
-    font-size: small;
-}
-
 #navbarLinks ul {
     height: 50px;
 }
@@ -92,7 +87,7 @@
     text-decoration: none;
     color: white;
     transition: .3s;
-    transform: translateX(20px); /* put the value you want here */
+    transform: translateX(20px);
 }
 
 .nav-other-contents .col-sm-2 a:hover{
@@ -100,8 +95,23 @@
     transform: translateX(0);
 }
 
+.caretd {
+    position: absolute;
+    background: #000;
+    width: 50px;
+    height: 37px;
+    right: -10px;
+    top: 0;
+    cursor: pointer;
+    color: #fff;
+    padding: 5px 0 20px 18px;
+    border-radius: 0 0 0 45px;
+    z-index: 10000;
+    box-shadow: 0 0 10px 0 #2a2a2a;
+}
+
 .sidenav {
-    height: 100%;
+    height: 100vh;
     width: 0;
     position: fixed;
     z-index: 1;
@@ -109,7 +119,6 @@
     left: 0;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 30px;
 }
 
 .sidenav a:hover {
@@ -127,31 +136,73 @@
     transition: 0.3s;
 }
 
+.search-form .input-group input, button {
+    max-height: 30px!important;
+    font-size: small;
+}
+
+.search-form {
+    width: 250px;
+}
+
+.sidenav-search-section {
+    min-height: 75px;
+}
+
+.sidenav-category-section {
+    height: 60%;
+}
+
+.sidenav-item {
+    background-color: #0c4128 ;
+    -webkit-transition: background-color 1s;
+    -moz-transition:    background-color 1s;
+    -ms-transition:     background-color 1s;
+    -o-transition:      background-color 1s;
+    transition:         background-color 1s;
+}
+
+.sidenav-item a {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.sidenav-item:hover {
+    background-color: #016938;
+}
+
+.sidenav-social-icons-section {
+    height: 30%;
+    transition: 0.5s;
+}
+
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
 
 .facebook-icon:hover {
-    color: #0a53be;
+    color: #0a53be!important;
 }
 
 .twitter-icon:hover {
-    color: #1DA1F2;
+    color: #1DA1F2!important;
 }
 
 .youtube-icon:hover {
-    color: #c4302b;
+    color: #c4302b!important;
 }
 
 .instagram-icon:hover {
-    color: #8a3ab9;
+    color: #8a3ab9!important;
 }
 
 .linkedin-icon:hover {
-    color: #0e76a8;
+    color: #0e76a8!important;
 }
 
 .archive-icon:hover {
-    color: #0c4128;
+    color: #0c4128!important;
 }
