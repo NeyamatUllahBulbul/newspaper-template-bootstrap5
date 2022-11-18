@@ -21,236 +21,31 @@
     <script src="./assets/plugins/js/jquery-3.6.1.min.js"></script>
 </head>
 <body class="bg-light">
-    <!-- Header-->
-    <header class="mt-2 mt-md-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-xs-12 d-flex justify-content-center justify-content-md-start position-relative">
-                    <!--Mobile menu opener-->
-                    <button class="navbar-toggler p-3 border-0 d-md-none float-start position-absolute start-0 top-1" type="button" id="navbarSideCollapse" onclick="openNav()">
-                        <i class="fa fa-bars fa-xl"></i>
-                    </button>
-                    <!--Mobile menu opener end-->
-                    <a href="">
-                        <img class="site-logo" src="https://www.dhakaprokash24.com/media/common/logo1637849341.png">
-                    </a>
-                </div>
-                <div class="col-md-4 d-none d-md-flex justify-content-center align-items-center">
-                    <small style="display: block;">
-                        <i class="fa fa-map-marker-alt"></i> ঢাকা &nbsp;
-                        <i class="fa fa-calendar-alt"></i> মঙ্গলবার, ১৫ নভেম্বর ২০২২
-                        | ১ অগ্রহায়ণ ১৪২৯
-                    </small>
-                </div>
-                <div class="col-md-2 d-none d-md-flex justify-content-center align-items-center">
-                    <a class="btn facebook-icon" href="https://www.facebook.com/dhakaprokash24" target="_blank" rel="nofollow">
-                        <i class="fab fa-facebook-square"></i>
-                    </a>
-
-                    <a class="btn twitter-icon" href="https://twitter.com/dhakaprokash24" target="_blank" rel="nofollow">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-
-                    <a class="btn youtube-icon" href="https://www.youtube.com/c/DhakaProkash" target="_blank" rel="nofollow">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-
-                    <a class="btn instagram-icon" href="https://www.instagram.com/dhakaprokash24/" target="_blank" rel="nofollow">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-
-                    <a class="btn linkedin-icon" href="https://www.linkedin.com/company/dhakaprokash" target="_blank" rel="nofollow">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
-                <div class="col-md-2 d-none d-md-flex justify-content-center align-items-center">
-                    <a class="btn archive-icon" href="" target="_blank">
-                        <small style="display: block;">
-                            <i class="fas fa-coins"></i> আর্কাইভ
-                        </small>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!--End Header-->
-
-    <!--Nav desktop start-->
-    <nav class="navbar navbar-expand d-none d-md-block bg-custom-primary sticky-top py-0">
-        <div class="container">
-            <div class="collapse navbar-collapse" id="navbarLinks">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item nav-active">
-                        <a class="nav-link text-white" href="#">
-                            <i class="fa fa-home-alt" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">ক্যাটাগরি <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">বিস্তারিত</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">খেলাধুলা</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">বিনোদন</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">লাইফস্টাইল</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">তথ্যপ্রযুক্তি</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white d-flex align-items-center" href="#" onclick="manage_mega_menu('navExtension')">
-                            সকল<i class="fa fa-caret-down m-lg-2"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <form class="form-inline float-end search-form" role="search">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="অনুসন্ধান করতে লিখুন" aria-label="Username" aria-describedby="basic-addon1">
-                    <button class="btn btn-light text-secondary border-start btn-sm" type="submit">খুজুন</button>
-                </div>
-            </form>
-        </div>
-    </nav>
-    <!--Nav desktop End-->
-
-    <!--Desktop mega menu start-->
-    <div class="nav-extension py-4 w-100 bg-custom-primary-dark position-relative" id="navExtension" style="display: none">
-        <div class="container ">
-            <div class="row nav-other-contents">
-                <div class="col-sm-2">
-                    <a href="">জাতীয়</a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="">জাতীয়</a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="">জাতীয়</a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="">জাতীয়</a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="">জাতীয়</a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="">জাতীয়</a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="#">জাতীয়</a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="#">জাতীয়</a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="#">জাতীয়</a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="#">জাতীয়</a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="#">জাতীয়</a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="#">জাতীয়</a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="#">জাতীয়</a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="#">জাতীয়</a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="#">জাতীয়</a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="#">জাতীয়</a>
-                </div>
-            </div>
-
-        </div>
-        <span class="caretd" onclick="close_mega_menu('navExtension');">
-            <i class="fa fa-close"></i>
-        </span>
-    </div>
-    <!--Desktop mega menu end-->
-
-    <!--Nav mobile start-->
-    <div id="navBackdrop" class="position-fixed top-0 start-0" style="background-color: rgba(0,0,0,0.3); width: 100%; height: 100%; display: none;" onclick="closeNav()">
-        <button class="navbar-toggler p-3 border-0 closebtn" onclick="closeNav()">
-            <i class="fa fa-close fa-sm "></i>
-        </button>
-    </div>
-    <div id="mobileMenu" class="sidenav bg-custom-secondary">
-        <div class="row d-flex justify-content-center align-items-center sticky-top bg-custom-primary-dark sidenav-search-section">
-            <form class="search-form p-0" role="search">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="অনুসন্ধান করতে লিখুন" aria-label="Username" aria-describedby="basic-addon1">
-                    <button class="btn btn-light text-secondary border-start btn-sm" type="submit">খুজুন</button>
-                </div>
-            </form>
-        </div>
-        <div class="row d-flex flex-column mt-2 overflow-scroll">
-            <div class="mb-0 sidenav-item">
-                <a class="text-decoration-none text-white border-2 border-bottom d-block" href="">
-                    <i class="fa fa-home-alt"></i>
+<!-- Header-->
+<header class="mt-2 mt-md-3 sticky-xs-top bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-xs-12 d-flex justify-content-center justify-content-md-start position-relative">
+                <!--Mobile menu opener-->
+                <button class="navbar-toggler p-3 border-0 d-md-none float-start position-absolute start-0 top-1"
+                        type="button" id="navbarSideCollapse" onclick="openNav()">
+                    <i class="fa fa-bars fa-xl"></i>
+                </button>
+                <!--Mobile menu opener end-->
+                <a href="">
+                    <img class="site-logo" src="https://www.dhakaprokash24.com/media/common/logo1637849341.png">
                 </a>
             </div>
-            <div class="mb-0 sidenav-item">
-                <a class="text-decoration-none text-white border-1 border-bottom d-block" href="">
-                    জাতীয়
-                </a>
+            <div class="col-md-4 d-none d-md-flex justify-content-center align-items-center">
+                <small style="display: block;">
+                    <i class="fa fa-map-marker-alt"></i> ঢাকা &nbsp;
+                    <i class="fa fa-calendar-alt"></i> মঙ্গলবার, ১৫ নভেম্বর ২০২২
+                    | ১ অগ্রহায়ণ ১৪২৯
+                </small>
             </div>
-            <div class="mb-0 sidenav-item">
-                <a class="text-decoration-none text-white border-1 border-bottom d-block" href="">
-                    জাতীয়
-                </a>
-            </div>
-            <div class="mb-0 sidenav-item">
-                <a class="text-decoration-none text-white border-1 border-bottom d-block" href="">
-                    জাতীয়
-                </a>
-            </div>
-            <div class="mb-0 sidenav-item">
-                <a class="text-decoration-none text-white border-1 border-bottom d-block" href="">
-                    জাতীয়
-                </a>
-            </div>
-            <div class="mb-0 sidenav-item">
-                <a class="text-decoration-none text-white border-1 border-bottom d-block" href="">
-                    জাতীয়
-                </a>
-            </div>
-            <div class="mb-0 sidenav-item">
-                <a class="text-decoration-none text-white border-1 border-bottom d-block" href="">
-                    জাতীয়
-                </a>
-            </div>
-            <div class="mb-0 sidenav-item">
-                <a class="text-decoration-none text-white border-1 border-bottom d-block" href="">
-                    জাতীয়
-                </a>
-            </div>
-            <div class="mb-0 sidenav-item">
-                <a class="text-decoration-none text-white border-1 border-bottom d-block" href="">
-                    জাতীয়
-                </a>
-            </div>
-            <div class="mb-0 sidenav-item">
-                <a class="text-decoration-none text-white border-1 border-bottom d-block" href="">
-                    জাতীয়
-                </a>
-            </div>
-        </div>
-        <div class="row bg-white sticky-bottom">
-            <div class="col-md-12 d-flex justify-content-center align-items-center">
-                <a class="btn facebook-icon" href="https://www.facebook.com/dhakaprokash24" target="_blank" rel="nofollow">
+            <div class="col-md-2 d-none d-md-flex justify-content-center align-items-center">
+                <a class="btn facebook-icon" href="https://www.facebook.com/dhakaprokash24" target="_blank"
+                   rel="nofollow">
                     <i class="fab fa-facebook-square"></i>
                 </a>
 
@@ -258,28 +53,247 @@
                     <i class="fab fa-twitter"></i>
                 </a>
 
-                <a class="btn youtube-icon" href="https://www.youtube.com/c/DhakaProkash" target="_blank" rel="nofollow">
+                <a class="btn youtube-icon" href="https://www.youtube.com/c/DhakaProkash" target="_blank"
+                   rel="nofollow">
                     <i class="fab fa-youtube"></i>
                 </a>
 
-                <a class="btn instagram-icon" href="https://www.instagram.com/dhakaprokash24/" target="_blank" rel="nofollow">
+                <a class="btn instagram-icon" href="https://www.instagram.com/dhakaprokash24/" target="_blank"
+                   rel="nofollow">
                     <i class="fab fa-instagram"></i>
                 </a>
 
-                <a class="btn linkedin-icon" href="https://www.linkedin.com/company/dhakaprokash" target="_blank" rel="nofollow">
+                <a class="btn linkedin-icon" href="https://www.linkedin.com/company/dhakaprokash" target="_blank"
+                   rel="nofollow">
                     <i class="fab fa-linkedin"></i>
                 </a>
+            </div>
+            <div class="col-md-2 d-none d-md-flex justify-content-center align-items-center">
+                <a class="btn archive-icon" href="" target="_blank">
+                    <small style="display: block;">
+                        <i class="fas fa-coins"></i> আর্কাইভ
+                    </small>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<!--End Header-->
+
+<!--Nav desktop start-->
+<nav class="navbar navbar-expand d-none d-md-block bg-custom-primary sticky-top py-0">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarLinks">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item nav-active">
+                    <a class="nav-link text-white" href="#">
+                        <i class="fa fa-home-alt" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">ক্যাটাগরি <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">বিস্তারিত</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">খেলাধুলা</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">বিনোদন</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">লাইফস্টাইল</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">তথ্যপ্রযুক্তি</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white d-flex align-items-center" href="#"
+                       onclick="manage_mega_menu('navExtension')">
+                        সকল<i class="fa fa-caret-down m-lg-2"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <form class="form-inline float-end search-form" role="search">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="অনুসন্ধান করতে লিখুন" aria-label="Username"
+                       aria-describedby="basic-addon1">
+                <button class="btn btn-light text-secondary border-start btn-sm" type="submit">খুজুন</button>
+            </div>
+        </form>
+    </div>
+</nav>
+<!--Nav desktop End-->
+
+<!--Desktop mega menu start-->
+<div class="nav-extension py-4 w-100 bg-custom-primary-dark position-relative" id="navExtension" style="display: none">
+    <div class="container ">
+        <div class="row nav-other-contents">
+            <div class="col-sm-2">
+                <a href="">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="#">জাতীয়</a>
             </div>
         </div>
 
     </div>
-    <!--Nav mobile End-->
+    <span class="caretd" onclick="close_mega_menu('navExtension');">
+            <i class="fa fa-close"></i>
+        </span>
+</div>
+<!--Desktop mega menu end-->
 
-    <main class="container">
-        <div class="content">
-            <div class="simple-marquee-container">
+<!--Nav mobile start-->
+<div id="navBackdrop" class="position-fixed top-0 start-0"
+     style="background-color: rgba(0,0,0,0.3); width: 100%; height: 100%; display: none; z-index: 3;"
+     onclick="closeNav()">
+    <button class="navbar-toggler p-3 border-0 closebtn" onclick="closeNav()">
+        <i class="fa fa-close fa-sm "></i>
+    </button>
+</div>
+<div id="mobileMenu" class="sidenav bg-custom-primary-dark overflow-scroll">
+    <div class="row d-flex justify-content-center align-items-center sticky-top bg-custom-primary-dark sidenav-search-section">
+        <form class="search-form p-0" role="search">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="অনুসন্ধান করতে লিখুন" aria-label="Username"
+                       aria-describedby="basic-addon1">
+                <button class="btn btn-light text-secondary border-start btn-sm" type="submit">খুজুন</button>
+            </div>
+        </form>
+    </div>
+    <div class="row d-flex flex-column mt-2 overflow-scroll">
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-2 border-bottom d-block" href="">
+                <i class="fa fa-home-alt"></i>
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="">
+                জাতীয়
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="">
+                জাতীয়
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="">
+                জাতীয়
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="">
+                জাতীয়
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="">
+                জাতীয়
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="">
+                জাতীয়
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="">
+                জাতীয়
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="">
+                জাতীয়
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="">
+                জাতীয়
+            </a>
+        </div>
+    </div>
+    <div class="row bg-white sticky-bottom">
+        <div class="col-md-12 d-flex justify-content-center align-items-center">
+            <a class="btn facebook-icon" href="https://www.facebook.com/dhakaprokash24" target="_blank" rel="nofollow">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+
+            <a class="btn twitter-icon" href="https://twitter.com/dhakaprokash24" target="_blank" rel="nofollow">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+            <a class="btn youtube-icon" href="https://www.youtube.com/c/DhakaProkash" target="_blank" rel="nofollow">
+                <i class="fab fa-youtube"></i>
+            </a>
+
+            <a class="btn instagram-icon" href="https://www.instagram.com/dhakaprokash24/" target="_blank"
+               rel="nofollow">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a class="btn linkedin-icon" href="https://www.linkedin.com/company/dhakaprokash" target="_blank"
+               rel="nofollow">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<!--Nav mobile End-->
+
+<main class="main-contents">
+    <div class="container">
+        <!--Breaking news start-->
+        <div class="content mt-3">
+            <div class="simple-marquee-container d-flex align-items-center">
                 <div class="marquee-sibling">
-                    I am here to iritate you
+                    <p class="d-none d-md-block">সংবাদ শিরোনাম</p>
+                    <p class="d-sm-block">শিরোনাম</p>
                 </div>
                 <div class="marquee">
                     <ul class="marquee-content-items">
@@ -292,68 +306,402 @@
                 </div>
             </div>
         </div>
+        <!--Breaking news end-->
 
-        <p>
+        <!--    Top Section start-->
+        <div class="row special-top">
+            <div class="col-md-5 d-flex flex-column mt-3">
+                <a href="">
+                    <img class="img-fluid" src="assets/img/750x390.png">
+                </a>
+                <a href="">
+                    <h4 class="mt-1 fw-bold">আমানতের ৮.২৫ শতাংশই খেলাপি </h4>
+                </a>
+                <small>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত টোকন। ভবিষ্যতের কথা বিবেচনা করে মার্কেন্টাইল ব্যাংকে ২০০৭ সালে একটি
+                    ব্যাংক অ্যাকাউন্ট খোলেন। সংসারের খরচ মিটিয়ে প্রতি মাসে তিনি কিছু সঞ্চয়ও... </small>
+            </div>
+            <div class="col-md-4 special-top-other-contents mt-3">
+                <a href="">
+                    <div class="row border-bottom border-1 mb-2" style="padding-bottom: 8px;">
+                        <div class="col-md-6 col-sm-6 col-6 px-md-0">
+                            <img class="img-fluid" src="assets/img/750x390.png">
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-6 special-top-other-contents-title">
+                            <p class="fw-bold">বেসরকারি একটি প্রতিষ্ঠানে কর্তরত টোকন</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="row border-bottom border-1 mb-2" style="padding-bottom: 8px;">
+                        <div class="col-md-6 col-sm-6 col-6 px-md-0">
+                            <img class="img-fluid" src="assets/img/750x390.png">
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-6 special-top-other-contents-title">
+                            <p class="fw-bold">বেসরকারি একটি প্রতিষ্ঠানে কর্তরত টোকন</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="row border-bottom border-1 mb-2" style="padding-bottom: 8px;">
+                        <div class="col-md-6 col-sm-6 col-6 px-md-0">
+                            <img class="img-fluid" src="assets/img/750x390.png">
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-6 special-top-other-contents-title">
+                            <p class="fw-bold">বেসরকারি একটি প্রতিষ্ঠানে কর্তরত টোকন</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 mt-3">
+                <div class="tabs">
+                    <div class="tab-2">
+                        <label for="tab2-1">সর্বশেষ</label>
+                        <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
+                        <div class="d-flex flex-column">
+                            <a class="border-bottom border-1 mb-2" href="">
+                                <div class="latest-contents-title">
+                                    <p>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত জনপ্রিয় টোকন</p>
+                                </div>
+                            </a>
+                            <a class="border-bottom border-1 mb-2" href="">
+                                <div class="latest-contents-title">
+                                    <p>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত জনপ্রিয় টোকন</p>
+                                </div>
+                            </a>
+                            <a class="border-bottom border-1 mb-2" href="">
+                                <div class="latest-contents-title">
+                                    <p>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত জনপ্রিয় টোকন</p>
+                                </div>
+                            </a>
+                            <a class="border-bottom border-1 mb-2" href="">
+                                <div class="latest-contents-title">
+                                    <p>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত জনপ্রিয় টোকন</p>
+                                </div>
+                            </a>
+                            <div class=" d-flex justify-content-center" href="">
+                                <a class="btn btn-sm btn-outline-success btn-all-news">সবখবর</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-2">
+                        <label for="tab2-2">জনপ্রিয়</label>
+                        <input id="tab2-2" name="tabs-two" type="radio">
+                        <div class="d-flex flex-column">
+                            <a class="border-bottom border-1 mb-2" href="">
+                                <div class="latest-contents-title">
+                                    <p>সংসারের খরচ মিটিয়ে প্রতি মাসে তিনি কিছু সঞ্চয়ও</p>
+                                </div>
+                            </a>
+                            <a class="border-bottom border-1 mb-2" href="">
+                                <div class="latest-contents-title">
+                                    <p>সংসারের খরচ মিটিয়ে প্রতি মাসে তিনি কিছু সঞ্চয়ও</p>
+                                </div>
+                            </a>
+                            <a class="border-bottom border-1 mb-2" href="">
+                                <div class="latest-contents-title">
+                                    <p>সংসারের খরচ মিটিয়ে প্রতি মাসে তিনি কিছু সঞ্চয়ও</p>
+                                </div>
+                            </a>
+                            <a class="border-bottom border-1 mb-2" href="">
+                                <div class="latest-contents-title">
+                                    <p>সংসারের খরচ মিটিয়ে প্রতি মাসে তিনি কিছু সঞ্চয়ও</p>
+                                </div>
+                            </a>
+                            <a class="border-bottom border-1 mb-2" href="">
+                                <div class="latest-contents-title">
+                                    <p>সংসারের খরচ মিটিয়ে প্রতি মাসে তিনি কিছু সঞ্চয়ও</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--    Top Section end-->
 
-            What is Lorem Ipsum?
+        <!--Top other 12 start-->
+        <div class="row">
+            <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-3">
+                <a href="">
+                    <img class="img-fluid" src="assets/img/750x390.png">
+                </a>
+                <a class="py-0" href="">
+                    <p class="mt-1 news-title-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>
+                </a>
+                <small>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত টোকন। ভবিষ্যতের কথা বিবেচনা করে মার্কেন্টাইল ব্যাংকে ২০০৭ সালে একটি
+                    ব্যাংক অ্যাকাউন্ট খোলেন... </small>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-3">
+                <a href="">
+                    <img class="img-fluid" src="assets/img/750x390.png">
+                </a>
+                <a class="py-0" href="">
+                    <p class="mt-1 news-title-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>
+                </a>
+                <small>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত টোকন। ভবিষ্যতের কথা বিবেচনা করে মার্কেন্টাইল ব্যাংকে ২০০৭ সালে একটি
+                    ব্যাংক অ্যাকাউন্ট খোলেন... </small>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-3">
+                <a href="">
+                    <img class="img-fluid" src="assets/img/750x390.png">
+                </a>
+                <a class="py-0" href="">
+                    <p class="mt-1 news-title-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>
+                </a>
+                <small>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত টোকন। ভবিষ্যতের কথা বিবেচনা করে মার্কেন্টাইল ব্যাংকে ২০০৭ সালে একটি
+                    ব্যাংক অ্যাকাউন্ট খোলেন... </small>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-3">
+                <a href="">
+                    <img class="img-fluid" src="assets/img/750x390.png">
+                </a>
+                <a class="py-0" href="">
+                    <p class="mt-1 news-title-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>
+                </a>
+                <small>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত টোকন। ভবিষ্যতের কথা বিবেচনা করে মার্কেন্টাইল ব্যাংকে ২০০৭ সালে একটি
+                    ব্যাংক অ্যাকাউন্ট খোলেন... </small>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-3">
+                <a href="">
+                    <img class="img-fluid" src="assets/img/750x390.png">
+                </a>
+                <a class="py-0" href="">
+                    <p class="mt-1 news-title-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>
+                </a>
+                <small>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত টোকন। ভবিষ্যতের কথা বিবেচনা করে মার্কেন্টাইল ব্যাংকে ২০০৭ সালে একটি
+                    ব্যাংক অ্যাকাউন্ট খোলেন... </small>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-3">
+                <a href="">
+                    <img class="img-fluid" src="assets/img/750x390.png">
+                </a>
+                <a class="py-0" href="">
+                    <p class="mt-1 news-title-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>
+                </a>
+                <small>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত টোকন। ভবিষ্যতের কথা বিবেচনা করে মার্কেন্টাইল ব্যাংকে ২০০৭ সালে একটি
+                    ব্যাংক অ্যাকাউন্ট খোলেন... </small>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-3">
+                <a href="">
+                    <img class="img-fluid" src="assets/img/750x390.png">
+                </a>
+                <a class="py-0" href="">
+                    <p class="mt-1 news-title-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>
+                </a>
+                <small>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত টোকন। ভবিষ্যতের কথা বিবেচনা করে মার্কেন্টাইল ব্যাংকে ২০০৭ সালে একটি
+                    ব্যাংক অ্যাকাউন্ট খোলেন... </small>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-3">
+                <a href="">
+                    <img class="img-fluid" src="assets/img/750x390.png">
+                </a>
+                <a class="py-0" href="">
+                    <p class="mt-1 news-title-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>
+                </a>
+                <small>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত টোকন। ভবিষ্যতের কথা বিবেচনা করে মার্কেন্টাইল ব্যাংকে ২০০৭ সালে একটি
+                    ব্যাংক অ্যাকাউন্ট খোলেন... </small>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-3">
+                <a href="">
+                    <img class="img-fluid" src="assets/img/750x390.png">
+                </a>
+                <a class="py-0" href="">
+                    <p class="mt-1 news-title-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>
+                </a>
+                <small>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত টোকন। ভবিষ্যতের কথা বিবেচনা করে মার্কেন্টাইল ব্যাংকে ২০০৭ সালে একটি
+                    ব্যাংক অ্যাকাউন্ট খোলেন... </small>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-3">
+                <a href="">
+                    <img class="img-fluid" src="assets/img/750x390.png">
+                </a>
+                <a class="py-0" href="">
+                    <p class="mt-1 news-title-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>
+                </a>
+                <small>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত টোকন। ভবিষ্যতের কথা বিবেচনা করে মার্কেন্টাইল ব্যাংকে ২০০৭ সালে একটি
+                    ব্যাংক অ্যাকাউন্ট খোলেন... </small>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-3">
+                <a href="">
+                    <img class="img-fluid" src="assets/img/750x390.png">
+                </a>
+                <a class="py-0" href="">
+                    <p class="mt-1 news-title-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>
+                </a>
+                <small>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত টোকন। ভবিষ্যতের কথা বিবেচনা করে মার্কেন্টাইল ব্যাংকে ২০০৭ সালে একটি
+                    ব্যাংক অ্যাকাউন্ট খোলেন... </small>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-3">
+                <a href="">
+                    <img class="img-fluid" src="assets/img/750x390.png">
+                </a>
+                <a class="py-0" href="">
+                    <p class="mt-1 news-title-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>
+                </a>
+                <small>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত টোকন। ভবিষ্যতের কথা বিবেচনা করে মার্কেন্টাইল ব্যাংকে ২০০৭ সালে একটি
+                    ব্যাংক অ্যাকাউন্ট খোলেন... </small>
+            </div>
+        </div>
+        <!--Top other 12 end-->
+    </div>
 
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            Why do we use it?
+    <div class="mt-2 bg-custom-secondary-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 d-flex flex-column mt-4">
+                    <div class="section-heading d-flex flex-column">
+                        <div class="section-heading-underline"></div>
+                        <p class="fw-bold news-title-md">জাতীয়</p>
+                    </div>
+                    <a class="section-lead border-bottom mb-2">
+                        <img class="img-fluid" src="assets/img/750x390.png">
+                        <h4 class="mt-1 news-title-md">আমানতের ৮.২৫ শতাংশই খেলাপি </h4>
+                    </a>
+                    <a class="border-bottom border-1 mb-2" href="">
+                        <div class="section-content-title">
+                            <p>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত জনপ্রিয় টোকন</p>
+                        </div>
+                    </a>
+                    <a class="border-bottom border-1 mb-2" href="">
+                        <div class="section-content-title">
+                            <p>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত জনপ্রিয় টোকন</p>
+                        </div>
+                    </a>
+                    <a class="border-bottom border-1 mb-2" href="">
+                        <div class="section-content-title">
+                            <p>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত জনপ্রিয় টোকন</p>
+                        </div>
+                    </a>
+                    <a class="border-bottom border-1 mb-2" href="">
+                        <div class="section-content-title">
+                            <p>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত জনপ্রিয় টোকন</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 d-flex flex-column mt-4">
+                    <div class="section-heading d-flex flex-column">
+                        <div class="section-heading-underline"></div>
+                        <p class="fw-bold news-title-md">জাতীয়</p>
+                    </div>
+                    <a class="section-lead border-bottom mb-2">
+                        <img class="img-fluid" src="assets/img/750x390.png">
+                        <h4 class="mt-1 news-title-md">আমানতের ৮.২৫ শতাংশই খেলাপি </h4>
+                    </a>
+                    <a class="border-bottom border-1 mb-2" href="">
+                        <div class="section-content-title">
+                            <p>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত জনপ্রিয় টোকন</p>
+                        </div>
+                    </a>
+                    <a class="border-bottom border-1 mb-2" href="">
+                        <div class="section-content-title">
+                            <p>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত জনপ্রিয় টোকন</p>
+                        </div>
+                    </a>
+                    <a class="border-bottom border-1 mb-2" href="">
+                        <div class="section-content-title">
+                            <p>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত জনপ্রিয় টোকন</p>
+                        </div>
+                    </a>
+                    <a class="border-bottom border-1 mb-2" href="">
+                        <div class="section-content-title">
+                            <p>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত জনপ্রিয় টোকন</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 d-flex flex-column mt-4">
+                    <div class="section-heading d-flex flex-column">
+                        <div class="section-heading-underline"></div>
+                        <p class="fw-bold news-title-md">জাতীয়</p>
+                    </div>
+                    <a class="section-lead border-bottom mb-2">
+                        <img class="img-fluid" src="assets/img/750x390.png">
+                        <h4 class="mt-1 news-title-md">আমানতের ৮.২৫ শতাংশই খেলাপি </h4>
+                    </a>
+                    <a class="border-bottom border-1 mb-2" href="">
+                        <div class="section-content-title">
+                            <p>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত জনপ্রিয় টোকন</p>
+                        </div>
+                    </a>
+                    <a class="border-bottom border-1 mb-2" href="">
+                        <div class="section-content-title">
+                            <p>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত জনপ্রিয় টোকন</p>
+                        </div>
+                    </a>
+                    <a class="border-bottom border-1 mb-2" href="">
+                        <div class="section-content-title">
+                            <p>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত জনপ্রিয় টোকন</p>
+                        </div>
+                    </a>
+                    <a class="border-bottom border-1 mb-2" href="">
+                        <div class="section-content-title">
+                            <p>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত জনপ্রিয় টোকন</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 d-flex flex-column mt-4">
+                    <div class="section-heading d-flex flex-column">
+                        <div class="section-heading-underline"></div>
+                        <p class="fw-bold news-title-md">জাতীয়</p>
+                    </div>
+                    <a class="section-lead border-bottom mb-2">
+                        <img class="img-fluid" src="assets/img/750x390.png">
+                        <h4 class="mt-1 news-title-md">আমানতের ৮.২৫ শতাংশই খেলাপি </h4>
+                    </a>
+                    <a class="border-bottom border-1 mb-2" href="">
+                        <div class="section-content-title">
+                            <p>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত জনপ্রিয় টোকন</p>
+                        </div>
+                    </a>
+                    <a class="border-bottom border-1 mb-2" href="">
+                        <div class="section-content-title">
+                            <p>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত জনপ্রিয় টোকন</p>
+                        </div>
+                    </a>
+                    <a class="border-bottom border-1 mb-2" href="">
+                        <div class="section-content-title">
+                            <p>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত জনপ্রিয় টোকন</p>
+                        </div>
+                    </a>
+                    <a class="border-bottom border-1 mb-2" href="">
+                        <div class="section-content-title">
+                            <p>বেসরকারি একটি প্রতিষ্ঠানে কর্তরত জনপ্রিয় টোকন</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-            Where does it come from?
-
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English
-
-            What is Lorem Ipsum?
-
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            Why do we use it?
-
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-            Where does it come from?
-
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English
-        </p>
-    </main>
+</main>
 
 <!--Scripts-->
-    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/plugins/fontawesome/js/all.js"></script>
-    <script src="./assets/plugins/js/index.js"></script>
-    <script src="./assets/plugins/js/marquee.js"></script>
+<script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/plugins/fontawesome/js/all.js"></script>
+<script src="./assets/plugins/js/index.js"></script>
+<script src="./assets/plugins/js/marquee.js"></script>
 
-    <script>
-        $(function (){
+<script>
+    $(function () {
+        let options = {
+            autostart: true,
+            property: 'value',
+            onComplete: null,
+            duration: 20000,
+            padding: 10,
+            marquee_class: '.marquee',
+            container_class: '.simple-marquee-container',
+            sibling_class: 0,
+            hover: true,
+            velocity: 0.1,
+            direction: 'left'
+        }
 
+        $('.simple-marquee-container').SimpleMarquee(options);
 
-                let options = {
-                    autostart: true,
-                    property: 'value',
-                    onComplete: null,
-                    duration: 20000,
-                    padding: 10,
-                    marquee_class: '.marquee',
-                    container_class: '.simple-marquee-container',
-                    sibling_class: 0,
-                    hover: true,
-                    velocity: 0.1,
-                    direction: 'left'
-                }
+        // $('.simple-marquee-container').SimpleMarquee();
+    });
 
-                $('.simple-marquee-container').SimpleMarquee(options);
-
-
-            // $('.simple-marquee-container').SimpleMarquee();
-        });
-
-    </script>
+</script>
 <!--Scripts End-->
 </body>
 </html>
