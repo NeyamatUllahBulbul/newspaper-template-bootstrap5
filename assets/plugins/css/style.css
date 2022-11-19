@@ -368,6 +368,10 @@ select:focus {
     font-size: 18px;
 }
 
+.news-title-sm {
+    font-size: 16px;
+}
+
 .section-heading-underline {
     position: relative;
     padding-bottom: 6px;
@@ -388,4 +392,36 @@ select:focus {
 
 .section-content-title {
     font-size: 15px;
+}
+
+.btn-section-more {
+    border-top: solid 1px #016938;
+    border-bottom: solid 1px #adadad;
+    border-radius: 0px!important;
+    color: #418d2f;
+}
+
+.btn-section-more:hover {
+    background-color: #016938;
+    color: white;
+}
+
+.section-bg-none {
+    margin-left: 0px!important;
+    margin-right: 0px!important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+}
+
+.footer-categories {
+    border-bottom: solid 1px #239F43;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+    .footer-info p{
+        margin-left: 0!important;
+    }
 }
