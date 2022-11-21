@@ -33,8 +33,8 @@
 
 .simple-marquee-container .marquee-sibling {
 	padding: 0;
-	background-color: #91ECBD;
-	color: black;
+	/*background-color: #91ECBD;*/
+	color: white;
 	width: 20%;
 	height: 37px;
 	line-height: 37px;
@@ -68,10 +68,11 @@
   color: black;
 }
 
-.simple-marquee-container .marquee-content-items li:after{
+.simple-marquee-container .marquee-content-items li:before{
 	font: var(--fa-font-solid);
 	content: ' \f0ac';
-	margin: 0 1em;
+	margin-left: 1rem;
+	margin-right: 0.4rem;
 }
 
 @media screen and (max-width: 500px) {
