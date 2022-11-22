@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'SolaimanLipiNormal';
+    src: url('../fonts/solaimanlipi_20-04-07.eot');
+    src: url('../fonts/solaimanlipi_20-04-07.eot') format('embedded-opentype'),
+    url('../fonts/solaimanlipi_20-04-07.woff') format('woff'),
+    url('../fonts/solaimanlipi_20-04-07.ttf') format('truetype'),
+    url('../fonts/solaimanlipi_20-04-07.svg') format('svg');
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, SolaimanLipi, sans-serif, SolaimanLipiNormal;
+    /*padding-top:100px;*/
+    overflow-x: hidden;
+}
+
 body a {
     text-decoration: none;
     color: black;
@@ -364,12 +379,12 @@ select:focus {
     color: white!important;
 }
 
-.news-title-md {
-    font-size: 18px;
+.custom-font-md {
+    font-size: 20px;
 }
 
-.news-title-sm {
-    font-size: 16px;
+.custom-font-sm {
+    font-size: 18px;
 }
 
 .section-heading-underline {
@@ -410,9 +425,7 @@ select:focus {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed7534', endColorstr='#2184cd',GradientType=1 );
 }
 
-.section-content-title {
-    font-size: 15px;
-}
+
 
 .btn-section-more {
     border-top: solid 1px #016938;
@@ -441,14 +454,14 @@ select:focus {
 }
 
 ul.breadcrumb {
-    padding: 10px 16px;
+    padding: 7px 16px;
     list-style: none;
     background-color: #eee;
     width: 100%;
 }
 ul.breadcrumb li {
     display: inline;
-    font-size: 15px;
+    font-size: 13px;
 }
 ul.breadcrumb li+li:before {
     padding: 8px;
@@ -461,6 +474,32 @@ ul.breadcrumb li+li:before {
 .news-date-time {
     font-size: 12px;
     color: gray;
+}
+
+.author-image img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-bottom: 0;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.author-image a {
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 5px;
+    color: #000;
+}
+
+.new-details img {
+    width: 100%;
+}
+
+.description {
+    font-size: 18px;
+    text-align: justify;
+    margin-top: 15px;
 }
 
 @media (min-width: 768px) {
