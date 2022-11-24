@@ -735,6 +735,84 @@ ul.breadcrumb li+li:before {
     padding: 2px 6px 2px 6px!important;
 }
 
+/*Special Section One Start*/
+.special-section-one {
+    position: relative;
+    background-color: #ecd7dc;
+    border-bottom: 2px solid #56042c;
+}
+
+.special-section-one .container {
+    margin-bottom: 15px !important;
+}
+
+.logo-fifa {
+    position: absolute;
+    left: -5.8%;
+    top: -64%;
+    height: 170px;
+    width: 140px;
+}
+
+.fifa-banner {
+    width: 80%;
+    height: 70px;
+    background-color: #56042c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    position: relative;
+}
+.banner-title {
+    color: white;
+    font-size: 35px;
+}
+
+.custom-col-2_5 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.special-section-one-content {
+    margin-bottom: 25px!important;
+    background-color: #1c4c75 !important;
+    height: 100%;
+}
+
+.special-section-one-content-title {
+    line-height: 1.2;
+    font-size: 17px;
+    margin-left: 7px;
+    margin-right: 7px;
+    padding-bottom: 12px;
+    padding-top: 3px;
+}
+
+.special-section-one-content-title a {
+    color: white!important;
+}
+
+.special-section-one-content-title a:hover {
+    color: yellow!important;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .custom-col-2_5 {
+        width: 20%!important;
+        float: left;
+    }
+
+    .special-section-one-content-row {
+        display: flex;
+    }
+}
+/*Special Section One End*/
+
 @media (min-width: 768px) {
     .horizontal-news-sm {
         padding-bottom: 8px;
