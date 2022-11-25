@@ -813,6 +813,10 @@ ul.breadcrumb li+li:before {
 }
 /*Special Section One End*/
 
+#timetable thead tr {
+    color: #239F43;
+}
+
 @media (min-width: 768px) {
     .horizontal-news-sm {
         padding-bottom: 8px;
