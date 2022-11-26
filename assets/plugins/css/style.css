@@ -426,7 +426,6 @@ select:focus {
 }
 
 
-
 .btn-section-more {
     border-top: solid 1px #016938;
     border-bottom: solid 1px #adadad;
@@ -847,3 +846,149 @@ ul.breadcrumb li+li:before {
         justify-content: center;
     }
 }
+
+/*Photo Gallery*/
+.gallery-title {
+    border-bottom: 3px solid #fff;
+}
+
+.gallery-title:hover {
+    border-bottom: 3px solid #942824;
+}
+
+.gallery-title a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.gallery-title a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+.gallery-title h2 {
+    margin-top: 0px!important;
+}
+
+.gallery-container {
+    background-color: #00427A;
+    color: #35373a;
+    /*padding: 20px 50px;*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.gallery {
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+/* Override bootstrap column paddings */
+.gallery .row > div {
+    padding: 5px;
+}
+
+.gallery .image-box img {
+    width: 100%;
+    border-radius: 0;
+}
+
+.image-box {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position:relative;
+}
+
+.overlay {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.7) 70%,rgba(0, 0, 0, 1) 100%);
+    opacity: 0.9;
+    top: 0;
+}
+
+.img-title {
+    position: absolute;
+    bottom: 1%;
+    color:white;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 30px;
+}
+
+.img-title-small {
+    position: absolute;
+    bottom: 1%;
+    color:white;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 19px;
+}
+
+.image-icon {
+    position: absolute;
+    height: 30px;
+    display: flex;
+    width: 30px;
+    background-color: #DE1818;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    left: 5px;
+    top: 5px;
+}
+
+.image-icon {
+    color: #fff!important;
+}
+
+.image-box:hover .img-title {
+    color: red;
+}
+
+.image-box:hover .img-title-small {
+    color: red;
+}
+
+.image-box:hover .image-icon {
+    color: white!important;
+}
+
+.image-box:hover .overlay {
+    background: linear-gradient(to bottom,rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.5) 70%,rgba(255, 255, 255, 1) 100%);
+}
+
+@media(max-width: 768px) {
+    .gallery {
+        padding: 10px;
+    }
+
+    .special-top-video-box .row .col-sm-6 .media .media-body {
+        border: none!important;
+    }
+
+    .special-top-video-box .row {
+        border: none!important;
+    }
+
+    .image-box {
+        margin-top: 10px!important;
+    }
+}
+
+@media(max-width: 960px) {
+    .img-title {
+        font-size: 20px!important;
+    }
+
+    .img-title-small {
+        font-size: 20px!important;
+    }
+}
+
+/*Gallery End*/
