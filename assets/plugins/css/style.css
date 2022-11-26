@@ -963,6 +963,22 @@ ul.breadcrumb li+li:before {
     background: linear-gradient(to bottom,rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.5) 70%,rgba(255, 255, 255, 1) 100%);
 }
 
+.category-with-date a {
+    font-size: 14px;
+    color: #239F43;
+}
+
+.category-with-date a:hover {
+    font-size: 14px;
+    color: #239F43;
+    text-decoration: underline;
+}
+
+.category-with-date p {
+    font-size: 13px;
+    color: gray;
+}
+
 @media(max-width: 768px) {
     .gallery {
         padding: 10px;
