@@ -59,7 +59,7 @@
     height: 40px;
     width: 100%;
     line-height: 40px;
-    display: none;
+    display: block;
 }
 
 .breaking_news > ul > li > a {
@@ -378,6 +378,19 @@
 
 .bn-title span {
     animation: blinker 1s linear infinite;
+}
+
+.btn-breaking-close {
+    position: absolute;
+    font-size: 20px;
+    top: 8px;
+    right: 1%;
+    color: gray;
+}
+
+.btn-breaking-close:hover {
+    cursor: pointer;
+    color: black;
 }
 
 @keyframes blinker {

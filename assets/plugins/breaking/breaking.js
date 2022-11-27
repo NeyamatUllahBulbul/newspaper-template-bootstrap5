@@ -1,3 +1,15 @@
+// <script>
+//     jQuery(window).load(function () {
+//     jQuery.noConflict();
+//     jQuery("#breaking-section").breakingNews({
+//     effect: "fade",
+//     autoplay: true,
+//     timer: 3000,
+//     color: 'darkred'
+// });
+// });
+// </script>
+
 (function (jQuery) {
     $.fn.breakingNews = function (params) {
         var defaults = {
