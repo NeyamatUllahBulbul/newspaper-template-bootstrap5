@@ -39,6 +39,10 @@ body a:hover {
     background-color: #EDFFF1 !important;
 }
 
+.bg-none {
+    background-color: #F8F9FA !important;
+}
+
 @media (max-width: 768px) {
     .sticky-xs-top {
         position: -webkit-sticky;
@@ -738,7 +742,7 @@ ul.breadcrumb li+li:before {
 .special-section-one {
     position: relative;
     background-color: #EDFFF1;
-    border-bottom: 2px solid #56042c;
+    /*border-bottom: 2px solid #56042c;*/
 }
 
 .special-section-one .container {
@@ -803,7 +807,7 @@ ul.breadcrumb li+li:before {
 .special-section-two {
     position: relative;
     background-color: #E4E7F7;
-    border-bottom: 2px solid #00427A;
+    /*border-bottom: 2px solid #00427A;*/
     padding-top: 15px;
 }
 
