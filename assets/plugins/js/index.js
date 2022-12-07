@@ -33,5 +33,5 @@ function manage_mega_menu (data) {
 }
 
 function close_breaking_news () {
-    document.getElementById('remove').style.display = "none";
+    document.getElementById('breaking-news').style.display = "none";
 }
