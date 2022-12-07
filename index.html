@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="generator" content="">
-    <title>INKQ</title>
+    <title>DP</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/offcanvas-navbar/">
 
@@ -18,6 +18,21 @@
     <link rel="stylesheet" href="assets/plugins/breaking/breaking.css">
     <!--Jquery-->
     <script src="assets/plugins/js/jquery-3.6.1.min.js"></script>
+    <style>
+
+
+        @media only screen and (max-width: 360px) {
+
+            }
+        /*    .margin-br{*/
+        /*        margin-top: 13px;*/
+        /*    }*/
+        /*}*/
+        /*.gradbox {*/
+        /*    background-color: #E4E4E4;*/
+        /*    background-image: linear-gradient(to right, red 5%, rgba(0,0,0,0) 5%);*/
+        /*}*/
+    </style>
 </head>
 <body class="bg-light">
 <!-- Header-->
@@ -296,12 +311,16 @@
 <main class="main-contents">
 
     <div class="container">
-
-        <div class="breaking-news" style="width: 100%; background-color: #E4E4E4; font-size: 20px; margin-top: 10px; padding: 10px 58px 10px 58px;display: flex; align-items: center; position: relative;">
-            <p class="my-0" style="margin-left: 13px; font-size: 19px;">প্রবল বৃষ্টিতেও শোলাকিয়ায় মুসল্লিদের ঢল</p>
+        <div id="remove">
+        <div class="d-flex flex-row"   style="width: 100%; background-color: #E4E4E4; font-size: 20px; margin-top: 10px; padding: 10px 58px 10px 58px; align-items: center; position: relative;">
+            <p class="my-0" style="margin-left: 13px; font-size: 19px; width: 100%">প্রবল বৃষ্টিতেও শোলাকিয়ায় মুসল্লিদের ঢল প্রবল বৃষ্টিতেও শোলাকিয়ায় প্রবল বৃষ্টিতেও শোলাকিয়ায় প্রবল বৃষ্টিতেও শোলাকিয়ায় প্রবল বৃষ্টিতেও শোলাকিয়ায় প্রবল বৃষ্টিতেও শোলাকিয়ায়</p>
+            <span class="btn-breaking-close" onclick="close_breaking_news()">
+                <i class="fa fa-close"></i>
+            </span>
+        </div>
         </div>
 
-        <div class="breaking_news bn-bordernone bn-darkred position-relative" id="breaking-section">
+        <div class="breaking_news bn-bordernone bn-darkred position-relative" id="remove-section">
             <div class="bn-title" style="width: auto;">
                 <h2 style="display: inline-block;"><span>ব্রেকিং</span></h2>
             </div>

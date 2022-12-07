@@ -383,7 +383,7 @@
 .btn-breaking-close {
     position: absolute;
     font-size: 20px;
-    top: 8px;
+    top: 10%;
     right: 1%;
     color: gray;
 }
@@ -398,3 +398,4 @@
         opacity: .1;
     }
 }
+
