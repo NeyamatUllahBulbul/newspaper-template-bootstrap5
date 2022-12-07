@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="generator" content="">
+    <title>DP</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/offcanvas-navbar/">
+
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/plugins/fontawesome/css/all.css" rel="stylesheet">
+    <link href="assets/plugins/css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/plugins/css/marquee.css">
+    <link rel="stylesheet" href="assets/plugins/breaking/breaking.css">
+    <!--Jquery-->
+    <script src="assets/plugins/js/jquery-3.6.1.min.js"></script>
+    <style>
+
+
+        @media only screen and (max-width: 360px) {
+
+        }
+        /*    .margin-br{*/
+        /*        margin-top: 13px;*/
+        /*    }*/
+        /*}*/
+        /*.gradbox {*/
+        /*    background-color: #E4E4E4;*/
+        /*    background-image: linear-gradient(to right, red 5%, rgba(0,0,0,0) 5%);*/
+        /*}*/
+    </style>
+</head>
+<body class="bg-light">
+<!-- Header-->
+<header class="mt-2 mt-md-3 sticky-xs-top bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-xs-12 d-flex justify-content-center justify-content-md-start position-relative">
+                <!--Mobile menu opener-->
+                <button class="navbar-toggler p-3 border-0 d-md-none float-start position-absolute start-0 top-1"
+                        type="button" id="navbarSideCollapse" onclick="openNav()">
+                    <i class="fa fa-bars fa-xl"></i>
+                </button>
+                <!--Mobile menu opener end-->
+                <a href="index.html">
+                    <img class="site-logo" src="https://www.dhakaprokash24.com/media/common/logo1637849341.png">
+                </a>
+            </div>
+            <div class="col-md-4 d-none d-md-flex justify-content-center align-items-center">
+                <small style="display: block;">
+                    <i class="fa fa-map-marker-alt"></i> ঢাকা &nbsp;
+                    <i class="fa fa-calendar-alt"></i> মঙ্গলবার, ১৫ নভেম্বর ২০২২
+                    | ১ অগ্রহায়ণ ১৪২৯
+                </small>
+            </div>
+            <div class="col-md-2 d-none d-md-flex justify-content-center align-items-center">
+                <a class="btn facebook-icon" href="https://www.facebook.com/dhakaprokash24" target="_blank"
+                   rel="nofollow">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+
+                <a class="btn twitter-icon" href="https://twitter.com/dhakaprokash24" target="_blank" rel="nofollow">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <a class="btn youtube-icon" href="https://www.youtube.com/c/DhakaProkash" target="_blank"
+                   rel="nofollow">
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+                <a class="btn instagram-icon" href="https://www.instagram.com/dhakaprokash24/" target="_blank"
+                   rel="nofollow">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a class="btn linkedin-icon" href="https://www.linkedin.com/company/dhakaprokash" target="_blank"
+                   rel="nofollow">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="col-md-2 d-none d-md-flex justify-content-center align-items-center">
+                <a class="btn archive-icon" href="archive.html" target="_blank">
+                    <small style="display: block;">
+                        <i class="fas fa-coins"></i> আর্কাইভ
+                    </small>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<!--End Header-->
+
+<!--Nav desktop start-->
+<nav class="navbar navbar-expand d-none d-md-block bg-custom-primary sticky-top py-0">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarLinks">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item nav-active">
+                    <a class="nav-link text-white" href="index.html">
+                        <i class="fa fa-home-alt" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white custom-font-sm" href="category.html">জাতীয়</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white custom-font-sm" href="category.html">আন্তর্জাতিক</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white custom-font-sm" href="category.html">খেলাধুলা</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white custom-font-sm" href="category.html">বিনোদন</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white custom-font-sm" href="category.html">বাংলাদেশ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white custom-font-sm" href="category.html">মহানগর</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white custom-font-sm" href="category.html">ইসলামী বিশ্ব</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white custom-font-sm" href="category.html">আজকের পত্রিকা</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white custom-font-sm" href="category.html">সম্পাদকীয়</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white d-flex align-items-center custom-font-sm" href="#"
+                       onclick="manage_mega_menu('navExtension')">
+                        সকল<i class="fa fa-caret-down m-lg-2"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <form class="form-inline float-end search-form" role="search">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="অনুসন্ধান করতে লিখুন" aria-label="Username"
+                       aria-describedby="basic-addon1">
+                <button class="btn btn-light text-secondary border-start btn-sm" type="submit">খুজুন</button>
+            </div>
+        </form>
+    </div>
+</nav>
+<!--Nav desktop End-->
+
+<!--Desktop mega menu start-->
+<div class="nav-extension py-4 w-100 bg-custom-primary-dark position-relative" id="navExtension" style="display: none">
+    <div class="container ">
+        <div class="row nav-other-contents">
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="#">জাতীয়</a>
+            </div>
+        </div>
+    </div>
+    <span class="caretd" onclick="close_mega_menu('navExtension');">
+            <i class="fa fa-close"></i>
+        </span>
+</div>
+<!--Desktop mega menu end-->
+
+<!--Nav mobile start-->
+<div id="navBackdrop" class="position-fixed top-0 start-0"
+     style="background-color: rgba(0,0,0,0.3); width: 100%; height: 100%; display: none; z-index: 3;"
+     onclick="closeNav()">
+    <button class="navbar-toggler p-3 border-0 closebtn" onclick="closeNav()">
+        <i class="fa fa-close fa-sm "></i>
+    </button>
+</div>
+<div id="mobileMenu" class="sidenav bg-custom-primary-dark overflow-scroll">
+    <div class="row d-flex justify-content-center align-items-center sticky-top bg-custom-primary-dark sidenav-search-section">
+        <form class="search-form p-0" role="search">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="অনুসন্ধান করতে লিখুন" aria-label="Username"
+                       aria-describedby="basic-addon1">
+                <button class="btn btn-light text-secondary border-start btn-sm" type="submit">খুজুন</button>
+            </div>
+        </form>
+    </div>
+    <div class="row d-flex flex-column mt-2 overflow-scroll">
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-2 border-bottom d-block" href="index.html">
+                <i class="fa fa-home-alt"></i>
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="category.html">
+                জাতীয়
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="category.html">
+                আন্তর্জাতিক
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="category.html">
+                খেলাধুলা
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="category.html">
+                বিনোদন
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="category.html">
+                বাংলাদেশ
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="category.html">
+                মহানগর
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="category.html">
+                ইসলামী বিশ্ব
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="category.html">
+                আজকের পত্রিকা
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="category.html">
+                সম্পাদকীয়
+            </a>
+        </div>
+    </div>
+    <div class="row bg-white sticky-bottom">
+        <div class="col-md-12 d-flex justify-content-center align-items-center">
+            <a class="btn facebook-icon" href="https://www.facebook.com/dhakaprokash24" target="_blank" rel="nofollow">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+
+            <a class="btn twitter-icon" href="https://twitter.com/dhakaprokash24" target="_blank" rel="nofollow">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+            <a class="btn youtube-icon" href="https://www.youtube.com/c/DhakaProkash" target="_blank" rel="nofollow">
+                <i class="fab fa-youtube"></i>
+            </a>
+
+            <a class="btn instagram-icon" href="https://www.instagram.com/dhakaprokash24/" target="_blank"
+               rel="nofollow">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a class="btn linkedin-icon" href="https://www.linkedin.com/company/dhakaprokash" target="_blank"
+               rel="nofollow">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<!--Nav mobile End-->
+
+<main class="main-contents">
+
+    <div class="container">
+        <div id="breaking-news" class="position-relative mt-3">
+            <div class="breaking-title" style="width: auto;">
+                <h2><span>ব্রেকিং</span></h2>
+            </div>
+            <div class="d-flex flex-row breaking_news_content">
+                <p class="my-0" style="margin-left: 13px; font-size: 19px; width: 100%">প্রবল বৃষ্টিতেও শোলাকিয়ায় প্রবল বৃষ্টিতেও শোলাকিয়ায় প্রবল বৃষ্টিতেও শোলাকিয়ায় প্রবল বৃষ্টিতেও শোলাকিয়ায়</p>
+                <span class="btn-breaking-close" onclick="close_breaking_news()">
+                    <i class="fa fa-close"></i>
+                </span>
+            </div>
+        </div>
+
+        <!--Breaking news start-->
+        <div class="content mt-3">
+            <div class="simple-marquee-container d-flex align-items-center">
+                <div class="marquee-sibling bg-custom-primary">
+                    <p class="d-sm-block">শিরোনাম</p>
+                </div>
+                <div class="marquee">
+                    <ul class="marquee-content-items">
+                        <li>সিলেটে বিএনপির গণসমাবেশ শুরু</li>
+                        <li>ফারদিন হত্যার ১৪ দিনেও কোনো অগ্রগতি নেই </li>
+                        <li>মিছিল নিয়ে সমাবেশ স্থলে আসছে নেতা-কর্মীরা </li>
+                        <li>বিএনপির সমাবেশ: মোবাইল নেটওয়ার্ক নেই সিলেটে </li>
+                        <li>পশ্চিমবঙ্গে ডেঙ্গু পরিস্থিতি কার্যত হাতের বাইরে </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--Breaking news end-->
+    </div>
+
+    <!--Media Gallery start-->
+    <div class="mt-4 bg-custom-primary-dark py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <div class="section-heading d-flex flex-column">
+                        <div class="section-heading-underline"></div>
+                        <a href="">
+                            <h2 class="fw-bold text-white">ফটো গ্যালারি</h2>
+                        </a>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-md-6 mt-2">
+                            <a class="image-box d-flex" href="" style="border: none!important;">
+                                <img class="img-fluid" src="https://www.dhakaprokash24.com/media/photoAlbum/2022November/goal4-20221125034242.jpg" alt="গোল অব দ্য ডে, শট অব দ্য ডে">
+                                <div class="overlay">
+                                    <b><p class="img-title">গোল অব দ্য ডে, শট অব দ্য ডে</p></b>
+                                </div>
+                                <span class="image-icon"><i class="fa fa-image"></i></span>
+                            </a>
+                        </div>
+                        <div class="col-md-3 d-flex flex-column mt-2">
+                            <a class="image-box d-flex" href="" style="border: none!important;">
+                                <img class="img-fluid" src="https://www.dhakaprokash24.com/media/photoAlbum/2022November/goal4-20221125034242.jpg" alt="গোল অব দ্য ডে, শট অব দ্য ডে">
+                                <div class="overlay">
+                                    <b><p class="img-title-small">গোল অব দ্য ডে, শট অব দ্য ডে</p></b>
+                                </div>
+                                <span class="image-icon"><i class="fa fa-image"></i></span>
+                            </a>
+                            <a class="image-box d-flex mt-2" href="" style="border: none!important;">
+                                <img class="img-fluid" src="https://www.dhakaprokash24.com/media/photoAlbum/2022November/goal4-20221125034242.jpg" alt="গোল অব দ্য ডে, শট অব দ্য ডে">
+                                <div class="overlay">
+                                    <b><p class="img-title-small">গোল অব দ্য ডে, শট অব দ্য ডে</p></b>
+                                </div>
+                                <span class="image-icon"><i class="fa fa-image"></i></span>
+                            </a>
+                        </div>
+                        <div class="col-md-3 d-flex flex-column mt-2">
+                            <a class="image-box d-flex" href="" style="border: none!important;">
+                                <img class="img-fluid" src="https://www.dhakaprokash24.com/media/photoAlbum/2022November/goal4-20221125034242.jpg" alt="গোল অব দ্য ডে, শট অব দ্য ডে">
+                                <div class="overlay">
+                                    <b><p class="img-title-small">গোল অব দ্য ডে, শট অব দ্য ডে</p></b>
+                                </div>
+                                <span class="image-icon"><i class="fa fa-image"></i></span>
+                            </a>
+                            <a class="image-box d-flex mt-2" href="" style="border: none!important;">
+                                <img class="img-fluid" src="https://www.dhakaprokash24.com/media/photoAlbum/2022November/goal4-20221125034242.jpg" alt="গোল অব দ্য ডে, শট অব দ্য ডে">
+                                <div class="overlay">
+                                    <b><p class="img-title-small">গোল অব দ্য ডে, শট অব দ্য ডে</p></b>
+                                </div>
+                                <span class="image-icon"><i class="fa fa-image"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Media Gallery end-->
+
+    <!--Footer start-->
+    <footer>
+        <div class="bg-custom-primary mt-4">
+            <div class="container pt-5">
+                <div class="row footer-categories">
+                    <div class="col-sm-2 col-6">
+                        <a class="custom-font-sm" href="">জাতীয়</a>
+                    </div>
+                    <div class="col-sm-2 col-6">
+                        <a class="custom-font-sm" href="">আন্তর্জাতিক</a>
+                    </div>
+                    <div class="col-sm-2 col-6">
+                        <a class="custom-font-sm" href="">খেলাধুলা</a>
+                    </div>
+                    <div class="col-sm-2 col-6">
+                        <a class="custom-font-sm" href="">বিনোদন</a>
+                    </div>
+                    <div class="col-sm-2 col-6">
+                        <a class="custom-font-sm" href="">বাংলাদেশ</a>
+                    </div>
+                    <div class="col-sm-2 col-6">
+                        <a class="custom-font-sm" href="">মহানগর</a>
+                    </div>
+                    <div class="col-sm-2 col-6">
+                        <a class="custom-font-sm" href="#">ইসলামী বিশ্ব</a>
+                    </div>
+                    <div class="col-sm-2 col-6">
+                        <a class="custom-font-sm" href="#">আজকের পত্রিকা</a>
+                    </div>
+                    <div class="col-sm-2 col-6">
+                        <a class="custom-font-sm" href="#">সম্পাদকীয়</a>
+                    </div>
+                </div>
+                <div class="d-block d-md-flex footer-info">
+                    <p class="d-inline-block custom-font-sm text-white">
+                        <i class="fa fa-envelope "></i> ইমেইল : <a class="text-white" href="mailto:abc@gmail.com">abc@gmail.com</a>
+                    </p>
+                    <p class="d-inline-block custom-font-sm text-white" style="margin-left: 18px;">
+                        <i class="fa fa-phone "></i> মোবাইল : <a class="text-white" href="tel:+8801711339946">+৮৮০ ১৭১ ১৩৩ ৯৯৪৬ </a>
+                    </p>
+                    <p class="d-inline-block custom-font-sm text-white" style="margin-left: 18px;">
+                        <i class="fa fa-map-marker-alt "></i> অফিস : শ্যামলী, পশ্চিম আগারগাঁও, ঢাকা - ১২০৭
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-custom-primary-dark">
+            <div class="container pt-4 pb-2 d-flex justify-content-between">
+                <p class="d-inline-block text-white" style="font-size: 14px!important;">
+                    <i class="fa fa-copyright"></i> ২০১৭ সর্বসত্ব সংরক্ষিত
+                </p>
+                <div class="col-md-2 d-none d-md-flex justify-content-end align-items-center">
+                    <a class="btn facebook-icon text-white" href="https://www.facebook.com/dhakaprokash24" target="_blank"
+                       rel="nofollow">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+
+                    <a class="btn twitter-icon text-white" href="https://twitter.com/dhakaprokash24" target="_blank" rel="nofollow">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+
+                    <a class="btn youtube-icon text-white" href="https://www.youtube.com/c/DhakaProkash" target="_blank"
+                       rel="nofollow">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                    <a class="btn instagram-icon text-white" href="https://www.instagram.com/dhakaprokash24/" target="_blank"
+                       rel="nofollow">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a class="btn linkedin-icon text-white" href="https://www.linkedin.com/company/dhakaprokash" target="_blank"
+                       rel="nofollow">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Footer end-->
+</main>
+
+<!--Scripts-->
+<script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/plugins/fontawesome/js/all.js"></script>
+<script src="./assets/plugins/js/index.js"></script>
+<script src="./assets/plugins/js/marquee.js"></script>
+
+<script>
+    $(function () {
+        let options = {
+            autostart: true,
+            property: 'value',
+            onComplete: null,
+            duration: 20000,
+            padding: 10,
+            marquee_class: '.marquee',
+            container_class: '.simple-marquee-container',
+            sibling_class: 0,
+            hover: true,
+            velocity: 0.1,
+            direction: 'left'
+        }
+
+        $('.simple-marquee-container').SimpleMarquee(options);
+
+        // $('.simple-marquee-container').SimpleMarquee();
+    });
+
+</script>
+<!--Scripts End-->
+</body>
+</html>
