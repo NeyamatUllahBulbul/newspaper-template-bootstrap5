@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="generator" content="">
+    <title>INK</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/offcanvas-navbar/">
+
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/plugins/fontawesome/css/all.css" rel="stylesheet">
+    <link href="./assets/plugins/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/plugins/photo-gallery/lightgallery.css">
+
+    <style>
+        .demo-gallery > ul {
+            margin-bottom: 0;
+        }
+        .demo-gallery > ul > li {
+            float: left;
+            margin-bottom: 15px;
+            margin-right: 20px;
+        }
+        .icon-position {
+            display: flex !important;
+            justify-content:flex-end!important
+        }
+        .demo-gallery > ul > li a {
+            border: 3px solid #FFF;
+            border-radius: 3px;
+            display: block;
+            overflow: hidden;
+            position: relative;
+            float: left;
+        }
+        .demo-gallery > ul > li a > img {
+            -webkit-transition: -webkit-transform 0.15s ease 0s;
+            -moz-transition: -moz-transform 0.15s ease 0s;
+            -o-transition: -o-transform 0.15s ease 0s;
+            transition: transform 0.15s ease 0s;
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+            height: 100%;
+            width: 100%;
+        }
+        .demo-gallery > ul > li a:hover > img {
+            -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+        .demo-gallery > ul > li a:hover .demo-gallery-poster > img {
+            opacity: 1;
+        }
+        .demo-gallery > ul > li a .demo-gallery-poster {
+            background-color: rgba(0, 0, 0, 0.1);
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            -webkit-transition: background-color 0.15s ease 0s;
+            -o-transition: background-color 0.15s ease 0s;
+            transition: background-color 0.15s ease 0s;
+        }
+        .demo-gallery > ul > li a .demo-gallery-poster > img {
+            left: 50%;
+            margin-left: -10px;
+            margin-top: -10px;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            -webkit-transition: opacity 0.3s ease 0s;
+            -o-transition: opacity 0.3s ease 0s;
+            transition: opacity 0.3s ease 0s;
+        }
+        .demo-gallery > ul > li a:hover .demo-gallery-poster {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .demo-gallery .justified-gallery > a > img {
+            -webkit-transition: -webkit-transform 0.15s ease 0s;
+            -moz-transition: -moz-transform 0.15s ease 0s;
+            -o-transition: -o-transform 0.15s ease 0s;
+            transition: transform 0.15s ease 0s;
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+            height: 100%;
+            width: 100%;
+        }
+        .demo-gallery .justified-gallery > a:hover > img {
+            -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+        .demo-gallery .justified-gallery > a:hover .demo-gallery-poster > img {
+            opacity: 1;
+        }
+        .demo-gallery .justified-gallery > a .demo-gallery-poster {
+            background-color: rgba(0, 0, 0, 0.1);
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            -webkit-transition: background-color 0.15s ease 0s;
+            -o-transition: background-color 0.15s ease 0s;
+            transition: background-color 0.15s ease 0s;
+        }
+        .demo-gallery .justified-gallery > a .demo-gallery-poster > img {
+            left: 50%;
+            margin-left: -10px;
+            margin-top: -10px;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            -webkit-transition: opacity 0.3s ease 0s;
+            -o-transition: opacity 0.3s ease 0s;
+            transition: opacity 0.3s ease 0s;
+        }
+        .demo-gallery .justified-gallery > a:hover .demo-gallery-poster {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .demo-gallery .video .demo-gallery-poster img {
+            height: 48px;
+            margin-left: -24px;
+            margin-top: -24px;
+            opacity: 0.8;
+            width: 48px;
+        }
+        .demo-gallery.dark > ul > li a {
+            border: 3px solid #04070a;
+        }
+        .home .demo-gallery {
+            padding-bottom: 80px;
+        }
+        .img-responsive{
+            width: 100%;
+        }
+        .bd-highlight {
+            background-color: rgba(86,61,124,0.15);
+            border: 1px solid rgba(86,61,124,0.15);
+            margin: 2px;
+        }
+
+        #details-margin{
+            margin: 10px 10px 10px 10px;
+        }
+        @media screen and (max-width: 360px) {
+            .icon-position {
+                display: flex !important;
+                justify-content:flex-start!important
+            }
+        }
+    </style>
+
+    <!--Jquery-->
+    <script src="./assets/plugins/js/jquery-3.6.1.min.js"></script>
+</head>
+<body class="bg-light">
+<!-- Header-->
+<header class="mt-2 mt-md-3 sticky-xs-top bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-xs-12 d-flex justify-content-center justify-content-md-start position-relative">
+                <!--Mobile menu opener-->
+                <button class="navbar-toggler p-3 border-0 d-md-none float-start position-absolute start-0 top-1"
+                        type="button" id="navbarSideCollapse" onclick="openNav()">
+                    <i class="fa fa-bars fa-xl"></i>
+                </button>
+                <!--Mobile menu opener end-->
+                <a href="index.html">
+                    <img class="site-logo" src="https://www.dhakaprokash24.com/media/common/logo1637849341.png">
+                </a>
+            </div>
+            <div class="col-md-4 d-none d-md-flex justify-content-center align-items-center">
+                <small style="display: block;">
+                    <i class="fa fa-map-marker-alt"></i> ঢাকা &nbsp;
+                    <i class="fa fa-calendar-alt"></i> মঙ্গলবার, ১৫ নভেম্বর ২০২২
+                    | ১ অগ্রহায়ণ ১৪২৯
+                </small>
+            </div>
+            <div class="col-md-2 d-none d-md-flex justify-content-center align-items-center">
+                <a class="btn facebook-icon" href="https://www.facebook.com/dhakaprokash24" target="_blank"
+                   rel="nofollow">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+
+                <a class="btn twitter-icon" href="https://twitter.com/dhakaprokash24" target="_blank" rel="nofollow">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <a class="btn youtube-icon" href="https://www.youtube.com/c/DhakaProkash" target="_blank"
+                   rel="nofollow">
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+                <a class="btn instagram-icon" href="https://www.instagram.com/dhakaprokash24/" target="_blank"
+                   rel="nofollow">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a class="btn linkedin-icon" href="https://www.linkedin.com/company/dhakaprokash" target="_blank"
+                   rel="nofollow">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="col-md-2 d-none d-md-flex justify-content-center align-items-center">
+                <a class="btn archive-icon" href="" target="_blank">
+                    <small style="display: block;">
+                        <i class="fas fa-coins"></i> আর্কাইভ
+                    </small>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<!--End Header-->
+
+<!--Nav desktop start-->
+<nav class="navbar navbar-expand d-none d-md-block bg-custom-primary sticky-top py-0">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarLinks">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item nav-active">
+                    <a class="nav-link text-white" href="index.html">
+                        <i class="fa fa-home-alt" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white custom-font-sm" href="category.html">জাতীয়</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white custom-font-sm" href="category.html">আন্তর্জাতিক</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white custom-font-sm" href="category.html">খেলাধুলা</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white custom-font-sm" href="category.html">বিনোদন</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white custom-font-sm" href="category.html">বাংলাদেশ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white custom-font-sm" href="category.html">মহানগর</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white custom-font-sm" href="category.html">ইসলামী বিশ্ব</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white custom-font-sm" href="category.html">আজকের পত্রিকা</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white custom-font-sm" href="category.html">সম্পাদকীয়</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white d-flex align-items-center custom-font-sm" href="#"
+                       onclick="manage_mega_menu('navExtension')">
+                        সকল<i class="fa fa-caret-down m-lg-2"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <form class="form-inline float-end search-form" role="search">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="অনুসন্ধান করতে লিখুন" aria-label="Username"
+                       aria-describedby="basic-addon1">
+                <button class="btn btn-light text-secondary border-start btn-sm" type="submit">খুজুন</button>
+            </div>
+        </form>
+    </div>
+</nav>
+<!--Nav desktop End-->
+
+<!--Desktop mega menu start-->
+<div class="nav-extension py-4 w-100 bg-custom-primary-dark position-relative" id="navExtension" style="display: none">
+    <div class="container ">
+        <div class="row nav-other-contents">
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="#">জাতীয়</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="custom-font-sm" href="#">জাতীয়</a>
+            </div>
+        </div>
+    </div>
+    <span class="caretd" onclick="close_mega_menu('navExtension');">
+            <i class="fa fa-close"></i>
+        </span>
+</div>
+<!--Desktop mega menu end-->
+
+<!--Nav mobile start-->
+<div id="navBackdrop" class="position-fixed top-0 start-0"
+     style="background-color: rgba(0,0,0,0.3); width: 100%; height: 100%; display: none; z-index: 3;"
+     onclick="closeNav()">
+    <button class="navbar-toggler p-3 border-0 closebtn" onclick="closeNav()">
+        <i class="fa fa-close fa-sm "></i>
+    </button>
+</div>
+<div id="mobileMenu" class="sidenav bg-custom-primary-dark overflow-scroll">
+    <div class="row d-flex justify-content-center align-items-center sticky-top bg-custom-primary-dark sidenav-search-section">
+        <form class="search-form p-0" role="search">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="অনুসন্ধান করতে লিখুন" aria-label="Username"
+                       aria-describedby="basic-addon1">
+                <button class="btn btn-light text-secondary border-start btn-sm" type="submit">খুজুন</button>
+            </div>
+        </form>
+    </div>
+    <div class="row d-flex flex-column mt-2 overflow-scroll">
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-2 border-bottom d-block" href="index.html">
+                <i class="fa fa-home-alt"></i>
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="category.html">
+                জাতীয়
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="category.html">
+                আন্তর্জাতিক
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="category.html">
+                খেলাধুলা
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="category.html">
+                বিনোদন
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="category.html">
+                বাংলাদেশ
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="category.html">
+                মহানগর
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="category.html">
+                ইসলামী বিশ্ব
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="category.html">
+                আজকের পত্রিকা
+            </a>
+        </div>
+        <div class="mb-0 sidenav-item">
+            <a class="text-decoration-none text-white border-1 border-bottom d-block" href="category.html">
+                সম্পাদকীয়
+            </a>
+        </div>
+    </div>
+    <div class="row bg-white sticky-bottom">
+        <div class="col-md-12 d-flex justify-content-center align-items-center">
+            <a class="btn facebook-icon" href="https://www.facebook.com/dhakaprokash24" target="_blank" rel="nofollow">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+
+            <a class="btn twitter-icon" href="https://twitter.com/dhakaprokash24" target="_blank" rel="nofollow">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+            <a class="btn youtube-icon" href="https://www.youtube.com/c/DhakaProkash" target="_blank" rel="nofollow">
+                <i class="fab fa-youtube"></i>
+            </a>
+
+            <a class="btn instagram-icon" href="https://www.instagram.com/dhakaprokash24/" target="_blank"
+               rel="nofollow">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a class="btn linkedin-icon" href="https://www.linkedin.com/company/dhakaprokash" target="_blank"
+               rel="nofollow">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<!--Nav mobile End-->
+
+<main class="main-contents">
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col-md-12">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="index.html">
+                            <i class="fa fa-home-alt"></i>
+                        </a>
+                    </li>
+                    <!--                    <li><a href="#">Pictures</a></li>-->
+                    <!--                    <li><a href="#">Summer 15</a></li>-->
+                    <li>ফটো গ্যালারি</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-9 mt-4">
+                <h2>ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</h2>
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <p class="news-date-time mt-1">
+                            <i class="fa fa-clock"></i> ২১ নভেম্বর ২০২২, ০৯:৪৪ পিএম
+                            | আপডেট: ২২ নভেম্বর ২০২২, ০১:৩৮ পিএম
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="icon-position">
+                            <a class=" btn btn-primary btn-sm btn-floating" style="background-color: #ac2bac; margin-right: 5px" role="button" href=""> <i class="fab fa-instagram"></i></a>
+                            <a class=" btn btn-primary btn-sm btn-floating" style="background-color: blue; margin-right: 5px" role="button" href=""> <i class="fab fa-facebook"></i></a>
+                            <a class=" btn btn-primary btn-sm btn-floating" style="background-color: red; margin-right: 5px" role="button" href=""> <i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <hr style="margin: 5px 0 12px 0;">
+
+                <div class="demo-gallery mt-4" style="width: 100%" >
+                    <ul id="lightgallery" class="list-unstyled row">
+                        <li class="col-12" data-src="1-1600.jpg" data-sub-html="<h4>ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</h4><p>কাতার বিশ্বকাপে আর্জেন্টিনার টিকে থাকার মিশনে মেক্সিকোর বিপক্ষে প্রথমার্ধে কোনও গোলের দেখা পায়নি। এমন কি গোল করার মতো কোনও সুযোগও</p>" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                            <a href="">
+                                <img class="img-responsive" src="1-1600.jpg" alt="Thumb-1">
+                            </a>
+                            <div class="bd-highlight"><p id="details-margin">কাতার বিশ্বকাপে আর্জেন্টিনার টিকে থাকার মিশনে মেক্সিকোর বিপক্ষে প্রথমার্ধে কোনও গোলের দেখা পায়নি। এমন কি গোল করার মতো কোনও সুযোগও তৈরি করতে পারেনি। অথচ এই অর্ধে তারা বল দখলে ছিল অনেক এগিয়ে। ৬৭ ভাগ বল ছিল তাদের দখলে। কিন্তু মাত্র ৩৩ ভাগ বল দখলে রেখে মেক্সিকো একটি গোল প্রায় পেয়েই যাচ্ছিল। কিন্তু অ‌্যএলক্সি ভেগার ফ্রি কিক আজর্জেন্টিনার গোলরক্ষক ইমিলিয়ানো মার্টিনেজ ডান দিকে ঝাঁপিয়ে পড়ে নিশ্চিত গোল রক্ষা করেন।</p></div>
+
+                        </li>
+                        <li class="col-12"  data-src="2-1600.jpg" data-sub-html="<h4>ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</h4><p>৬৭ ভাগ বল ছিল তাদের দখলে। কিন্তু মাত্র ৩৩ ভাগ বল দখলে রেখে মেক্সিকো একটি গোল প্রায় পেয়েই যাচ্ছিল।</p>" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                            <a href="">
+                                <img class="img-responsive" src="2-1600.jpg" alt="Thumb-2">
+                            </a>
+                            <div class="bd-highlight"><p id="details-margin">কাতার বিশ্বকাপে আর্জেন্টিনার টিকে থাকার মিশনে মেক্সিকোর বিপক্ষে প্রথমার্ধে কোনও গোলের দেখা পায়নি। এমন কি গোল করার মতো কোনও সুযোগও তৈরি করতে পারেনি। অথচ এই অর্ধে তারা বল দখলে ছিল অনেক এগিয়ে। ৬৭ ভাগ বল ছিল তাদের দখলে। কিন্তু মাত্র ৩৩ ভাগ বল দখলে রেখে মেক্সিকো একটি গোল প্রায় পেয়েই যাচ্ছিল। কিন্তু অ‌্যএলক্সি ভেগার ফ্রি কিক আজর্জেন্টিনার গোলরক্ষক ইমিলিয়ানো মার্টিনেজ ডান দিকে ঝাঁপিয়ে পড়ে নিশ্চিত গোল রক্ষা করেন।</p></div>
+                        </li>
+                        <li class="col-12"  data-src="13-1600.jpg" data-sub-html="<h4>ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</h4><p>কিন্তু মাত্র ৩৩ ভাগ বল দখলে রেখে মেক্সিকো একটি গোল প্রায় পেয়েই যাচ্ছিল। কিন্তু অ‌্যএলক্সি ভেগার ফ্রি কিক আজর্জেন্টিনার গোলরক্ষক ইমিলিয়ানো মার্টিনেজ ডান দিকে ঝাঁপিয়ে পড়ে নিশ্চিত গোল রক্ষা করেন।</p>" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                            <a href="">
+                                <img class="img-responsive" src="13-1600.jpg" alt="Thumb-3">
+                            </a>
+                            <div class="bd-highlight"><p id="details-margin">কাতার বিশ্বকাপে আর্জেন্টিনার টিকে থাকার মিশনে মেক্সিকোর বিপক্ষে প্রথমার্ধে কোনও গোলের দেখা পায়নি। এমন কি গোল করার মতো কোনও সুযোগও তৈরি করতে পারেনি। অথচ এই অর্ধে তারা বল দখলে ছিল অনেক এগিয়ে। ৬৭ ভাগ বল ছিল তাদের দখলে। কিন্তু মাত্র ৩৩ ভাগ বল দখলে রেখে মেক্সিকো একটি গোল প্রায় পেয়েই যাচ্ছিল। কিন্তু অ‌্যএলক্সি ভেগার ফ্রি কিক আজর্জেন্টিনার গোলরক্ষক ইমিলিয়ানো মার্টিনেজ ডান দিকে ঝাঁপিয়ে পড়ে নিশ্চিত গোল রক্ষা করেন।</p></div>
+                        </li>
+                        <li class="col-12"  data-src="4-1600.jpg" data-sub-html="<h4>ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</h4><p>কাতার বিশ্বকাপে আর্জেন্টিনার টিকে থাকার মিশনে মেক্সিকোর বিপক্ষে প্রথমার্ধে কোনও গোলের দেখা পায়নি। এমন কি গোল করার মতো কোনও সুযোগও তৈরি করতে পারেনি।</p>" data-tweet-text="share on twitter 1">
+                            <a href="">
+                                <img class="img-responsive" src="4-1600.jpg" alt="Thumb-4">
+                            </a>
+                            <div class="bd-highlight"><p id="details-margin">কাতার বিশ্বকাপে আর্জেন্টিনার টিকে থাকার মিশনে মেক্সিকোর বিপক্ষে প্রথমার্ধে কোনও গোলের দেখা পায়নি। এমন কি গোল করার মতো কোনও সুযোগও তৈরি করতে পারেনি। অথচ এই অর্ধে তারা বল দখলে ছিল অনেক এগিয়ে। ৬৭ ভাগ বল ছিল তাদের দখলে। কিন্তু মাত্র ৩৩ ভাগ বল দখলে রেখে মেক্সিকো একটি গোল প্রায় পেয়েই যাচ্ছিল। কিন্তু অ‌্যএলক্সি ভেগার ফ্রি কিক আজর্জেন্টিনার গোলরক্ষক ইমিলিয়ানো মার্টিনেজ ডান দিকে ঝাঁপিয়ে পড়ে নিশ্চিত গোল রক্ষা করেন।</p></div>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!--                <div class="new-details" id="lightgallery">-->
+                <!--                    <photo responsive = "/assets/img/750x390.png, /assets/img/750x390.png, assets/img/750x390.png, assets/img/750x390.png" data-src = "750x390.png" data-sub-html = "<p>‘৫০তম আমেরিকান মিউজিক অ্যাওয়ার্ড’ সুপারস্টার মার্কিন গায়িকা টেইলর সুইফটময় হয়েছে। তিনি যে ছয়টি বিভাগে মনোনীত হয়েছেন, সবগুলো জয় করেছেন। বছরের সেরা শিল্পী, রাতটির সেরা সম্মানিত (দি নাইটস টপ অনার)ও হয়েছেন। তিনি এই এএমএ’র মোট ৪০টি পুরস্কারজয়ী।</p>">-->
+                <!--                        <a href=""><img src="assets/img/750x390.png"></a>-->
+                <!--                    </photo>-->
+
+                <!--                    <div class="description">-->
+                <!--                        <p>‘৫০তম আমেরিকান মিউজিক অ্যাওয়ার্ড’ সুপারস্টার মার্কিন গায়িকা টেইলর সুইফটময় হয়েছে। তিনি যে ছয়টি বিভাগে মনোনীত হয়েছেন, সবগুলো জয় করেছেন। বছরের সেরা শিল্পী, রাতটির সেরা সম্মানিত (দি নাইটস টপ অনার)ও হয়েছেন। তিনি এই এএমএ’র মোট ৪০টি পুরস্কারজয়ী।</p>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--                <hr style="margin: -10px 0 12px 0;">-->
+
+            </div>
+            <div class="col-md-3 d-flex flex-column mt-4">
+                <div class="section-heading d-flex flex-column">
+                    <div class="section-heading-underline"></div>
+                    <p class="fw-bold custom-font-sm"> আরও</p>
+                </div>
+                <a href="">
+                    <div class="row border-bottom border-1 mb-2 horizontal-news-sm">
+                        <div class="col-md-6 col-sm-6 col-6 px-md-0">
+                            <img class="img-fluid" src="assets/img/750x390.png">
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-6 special-top-other-contents-title">
+                            <p class="">ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="row border-bottom border-1 mb-2 horizontal-news-sm">
+                        <div class="col-md-6 col-sm-6 col-6 px-md-0">
+                            <img class="img-fluid" src="assets/img/750x390.png">
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-6 special-top-other-contents-title">
+                            <p class="">ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="row border-bottom border-1 mb-2 horizontal-news-sm">
+                        <div class="col-md-6 col-sm-6 col-6 px-md-0">
+                            <img class="img-fluid" src="assets/img/750x390.png">
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-6 special-top-other-contents-title">
+                            <p class="">ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="row border-bottom border-1 mb-2 horizontal-news-sm">
+                        <div class="col-md-6 col-sm-6 col-6 px-md-0">
+                            <img class="img-fluid" src="assets/img/750x390.png">
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-6 special-top-other-contents-title">
+                            <p class="">ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="row border-bottom border-1 mb-2 horizontal-news-sm">
+                        <div class="col-md-6 col-sm-6 col-6 px-md-0">
+                            <img class="img-fluid" src="assets/img/750x390.png">
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-6 special-top-other-contents-title">
+                            <p class="">ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="row border-bottom border-1 mb-2 horizontal-news-sm">
+                        <div class="col-md-6 col-sm-6 col-6 px-md-0">
+                            <img class="img-fluid" src="assets/img/750x390.png">
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-6 special-top-other-contents-title">
+                            <p class="">ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="row border-bottom border-1 mb-2 horizontal-news-sm">
+                        <div class="col-md-6 col-sm-6 col-6 px-md-0">
+                            <img class="img-fluid" src="assets/img/750x390.png">
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-6 special-top-other-contents-title">
+                            <p class="">ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="btn btn-section-more" href="">আরও</a>
+            </div>
+        </div>
+    </div>
+
+    <!--    <div class="mt-3 bg-custom-secondary-light py-4">-->
+    <!--        <div class="container">-->
+    <!--            <div class="row">-->
+    <!--                <div class="section-heading d-flex flex-column">-->
+    <!--                    <div class="section-heading-underline"></div>-->
+    <!--                    <p class="fw-bold custom-font-md">আরও পড়ুন</p>-->
+    <!--                </div>-->
+    <!--                <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-2">-->
+    <!--                    <a href="">-->
+    <!--                        <img class="img-fluid" src="assets/img/750x390.png">-->
+    <!--                    </a>-->
+    <!--                    <a class="py-0" href="">-->
+    <!--                        <p class="mt-2 custom-font-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>-->
+    <!--                    </a>-->
+    <!--                </div>-->
+    <!--                <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-2">-->
+    <!--                    <a href="">-->
+    <!--                        <img class="img-fluid" src="assets/img/750x390.png">-->
+    <!--                    </a>-->
+    <!--                    <a class="py-0" href="">-->
+    <!--                        <p class="mt-2 custom-font-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>-->
+    <!--                    </a>-->
+    <!--                </div>-->
+    <!--                <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-2">-->
+    <!--                    <a href="">-->
+    <!--                        <img class="img-fluid" src="assets/img/750x390.png">-->
+    <!--                    </a>-->
+    <!--                    <a class="py-0" href="">-->
+    <!--                        <p class="mt-2 custom-font-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>-->
+    <!--                    </a>-->
+    <!--                </div>-->
+    <!--                <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-2">-->
+    <!--                    <a href="">-->
+    <!--                        <img class="img-fluid" src="assets/img/750x390.png">-->
+    <!--                    </a>-->
+    <!--                    <a class="py-0" href="">-->
+    <!--                        <p class="mt-2 custom-font-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>-->
+    <!--                    </a>-->
+    <!--                </div>-->
+    <!--                <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-3">-->
+    <!--                    <a href="">-->
+    <!--                        <img class="img-fluid" src="assets/img/750x390.png">-->
+    <!--                    </a>-->
+    <!--                    <a class="py-0" href="">-->
+    <!--                        <p class="mt-2 custom-font-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>-->
+    <!--                    </a>-->
+    <!--                </div>-->
+    <!--                <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-3">-->
+    <!--                    <a href="">-->
+    <!--                        <img class="img-fluid" src="assets/img/750x390.png">-->
+    <!--                    </a>-->
+    <!--                    <a class="py-0" href="">-->
+    <!--                        <p class="mt-2 custom-font-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>-->
+    <!--                    </a>-->
+    <!--                </div>-->
+    <!--                <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-3">-->
+    <!--                    <a href="">-->
+    <!--                        <img class="img-fluid" src="assets/img/750x390.png">-->
+    <!--                    </a>-->
+    <!--                    <a class="py-0" href="">-->
+    <!--                        <p class="mt-2 custom-font-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>-->
+    <!--                    </a>-->
+    <!--                </div>-->
+    <!--                <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-3">-->
+    <!--                    <a href="">-->
+    <!--                        <img class="img-fluid" src="assets/img/750x390.png">-->
+    <!--                    </a>-->
+    <!--                    <a class="py-0" href="">-->
+    <!--                        <p class="mt-2 custom-font-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>-->
+    <!--                    </a>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+
+    <!--Footer start-->
+    <footer>
+        <div class="bg-custom-primary mt-4">
+            <div class="container pt-5">
+                <div class="row footer-categories">
+                    <div class="col-sm-2 col-6">
+                        <a class="custom-font-sm" href="">জাতীয়</a>
+                    </div>
+                    <div class="col-sm-2 col-6">
+                        <a class="custom-font-sm" href="">আন্তর্জাতিক</a>
+                    </div>
+                    <div class="col-sm-2 col-6">
+                        <a class="custom-font-sm" href="">খেলাধুলা</a>
+                    </div>
+                    <div class="col-sm-2 col-6">
+                        <a class="custom-font-sm" href="">বিনোদন</a>
+                    </div>
+                    <div class="col-sm-2 col-6">
+                        <a class="custom-font-sm" href="">বাংলাদেশ</a>
+                    </div>
+                    <div class="col-sm-2 col-6">
+                        <a class="custom-font-sm" href="">মহানগর</a>
+                    </div>
+                    <div class="col-sm-2 col-6">
+                        <a class="custom-font-sm" href="#">ইসলামী বিশ্ব</a>
+                    </div>
+                    <div class="col-sm-2 col-6">
+                        <a class="custom-font-sm" href="#">আজকের পত্রিকা</a>
+                    </div>
+                    <div class="col-sm-2 col-6">
+                        <a class="custom-font-sm" href="#">সম্পাদকীয়</a>
+                    </div>
+                </div>
+                <div class="d-block d-md-flex footer-info">
+                    <p class="d-inline-block custom-font-sm text-white">
+                        <i class="fa fa-envelope "></i> ইমেইল : <a class="text-white" href="mailto:abc@gmail.com">abc@gmail.com</a>
+                    </p>
+                    <p class="d-inline-block custom-font-sm text-white" style="margin-left: 18px;">
+                        <i class="fa fa-phone "></i> মোবাইল : <a class="text-white" href="tel:+8801711339946">+৮৮০ ১৭১ ১৩৩ ৯৯৪৬ </a>
+                    </p>
+                    <p class="d-inline-block custom-font-sm text-white" style="margin-left: 18px;">
+                        <i class="fa fa-map-marker-alt "></i> অফিস : শ্যামলী, পশ্চিম আগারগাঁও, ঢাকা - ১২০৭
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-custom-primary-dark">
+            <div class="container pt-4 pb-2 d-flex justify-content-between">
+                <p class="d-inline-block text-white" style="font-size: 14px!important;">
+                    <i class="fa fa-copyright"></i> ২০১৭ সর্বসত্ব সংরক্ষিত
+                </p>
+                <div class="col-md-2 d-none d-md-flex justify-content-end align-items-center">
+                    <a class="btn facebook-icon text-white" href="https://www.facebook.com/dhakaprokash24" target="_blank"
+                       rel="nofollow">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+
+                    <a class="btn twitter-icon text-white" href="https://twitter.com/dhakaprokash24" target="_blank" rel="nofollow">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+
+                    <a class="btn youtube-icon text-white" href="https://www.youtube.com/c/DhakaProkash" target="_blank"
+                       rel="nofollow">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                    <a class="btn instagram-icon text-white" href="https://www.instagram.com/dhakaprokash24/" target="_blank"
+                       rel="nofollow">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a class="btn linkedin-icon text-white" href="https://www.linkedin.com/company/dhakaprokash" target="_blank"
+                       rel="nofollow">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Footer end-->
+</main>
+
+<!--Scripts-->
+<script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/plugins/fontawesome/js/all.js"></script>
+<!--<script src="./assets/plugins/js/index.js"></script>-->
+
+<!--Add this button-->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-637c81f3f806a8c7"></script>
+
+<!--Photo Gallery-->
+<script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-pager.js/master/dist/lg-pager.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-autoplay.js/master/dist/lg-autoplay.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-fullscreen.js/master/dist/lg-fullscreen.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-hash.js/master/dist/lg-hash.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-share.js/master/dist/lg-share.js"></script>
+<script src="./assets/plugins/photo-gallery/lg-thumbnail.min.js"></script>
+<script type="text/javascript">
+    lightGallery(document.getElementById('lightgallery'),{
+        thumbnail: true
+    });
+</script>
+<!--Scripts End-->
+</body>
+</html>

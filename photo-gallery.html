@@ -6,155 +6,33 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="generator" content="">
-    <title>INK</title>
+    <title>DP</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/offcanvas-navbar/">
 
-    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./assets/plugins/fontawesome/css/all.css" rel="stylesheet">
-    <link href="./assets/plugins/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/plugins/photo-gallery/lightgallery.css">
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/plugins/fontawesome/css/all.css" rel="stylesheet">
+    <link href="assets/plugins/css/style.css" rel="stylesheet">
 
-    <style>
-        .demo-gallery > ul {
-            margin-bottom: 0;
-        }
-        .demo-gallery > ul > li {
-            float: left;
-            margin-bottom: 15px;
-            margin-right: 20px;
-        }
-        .icon-position {
-            display: flex !important;
-            justify-content:flex-end!important
-        }
-        .demo-gallery > ul > li a {
-            border: 3px solid #FFF;
-            border-radius: 3px;
-            display: block;
-            overflow: hidden;
-            position: relative;
-            float: left;
-        }
-        .demo-gallery > ul > li a > img {
-            -webkit-transition: -webkit-transform 0.15s ease 0s;
-            -moz-transition: -moz-transform 0.15s ease 0s;
-            -o-transition: -o-transform 0.15s ease 0s;
-            transition: transform 0.15s ease 0s;
-            -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
-            height: 100%;
-            width: 100%;
-        }
-        .demo-gallery > ul > li a:hover > img {
-            -webkit-transform: scale3d(1.1, 1.1, 1.1);
-            transform: scale3d(1.1, 1.1, 1.1);
-        }
-        .demo-gallery > ul > li a:hover .demo-gallery-poster > img {
-            opacity: 1;
-        }
-        .demo-gallery > ul > li a .demo-gallery-poster {
-            background-color: rgba(0, 0, 0, 0.1);
-            bottom: 0;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-            -webkit-transition: background-color 0.15s ease 0s;
-            -o-transition: background-color 0.15s ease 0s;
-            transition: background-color 0.15s ease 0s;
-        }
-        .demo-gallery > ul > li a .demo-gallery-poster > img {
-            left: 50%;
-            margin-left: -10px;
-            margin-top: -10px;
-            opacity: 0;
-            position: absolute;
-            top: 50%;
-            -webkit-transition: opacity 0.3s ease 0s;
-            -o-transition: opacity 0.3s ease 0s;
-            transition: opacity 0.3s ease 0s;
-        }
-        .demo-gallery > ul > li a:hover .demo-gallery-poster {
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        .demo-gallery .justified-gallery > a > img {
-            -webkit-transition: -webkit-transform 0.15s ease 0s;
-            -moz-transition: -moz-transform 0.15s ease 0s;
-            -o-transition: -o-transform 0.15s ease 0s;
-            transition: transform 0.15s ease 0s;
-            -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
-            height: 100%;
-            width: 100%;
-        }
-        .demo-gallery .justified-gallery > a:hover > img {
-            -webkit-transform: scale3d(1.1, 1.1, 1.1);
-            transform: scale3d(1.1, 1.1, 1.1);
-        }
-        .demo-gallery .justified-gallery > a:hover .demo-gallery-poster > img {
-            opacity: 1;
-        }
-        .demo-gallery .justified-gallery > a .demo-gallery-poster {
-            background-color: rgba(0, 0, 0, 0.1);
-            bottom: 0;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-            -webkit-transition: background-color 0.15s ease 0s;
-            -o-transition: background-color 0.15s ease 0s;
-            transition: background-color 0.15s ease 0s;
-        }
-        .demo-gallery .justified-gallery > a .demo-gallery-poster > img {
-            left: 50%;
-            margin-left: -10px;
-            margin-top: -10px;
-            opacity: 0;
-            position: absolute;
-            top: 50%;
-            -webkit-transition: opacity 0.3s ease 0s;
-            -o-transition: opacity 0.3s ease 0s;
-            transition: opacity 0.3s ease 0s;
-        }
-        .demo-gallery .justified-gallery > a:hover .demo-gallery-poster {
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        .demo-gallery .video .demo-gallery-poster img {
-            height: 48px;
-            margin-left: -24px;
-            margin-top: -24px;
-            opacity: 0.8;
-            width: 48px;
-        }
-        .demo-gallery.dark > ul > li a {
-            border: 3px solid #04070a;
-        }
-        .home .demo-gallery {
-            padding-bottom: 80px;
-        }
-        .img-responsive{
-            width: 100%;
-        }
-        .bd-highlight {
-            background-color: rgba(86,61,124,0.15);
-            border: 1px solid rgba(86,61,124,0.15);
-            margin: 2px;
-        }
-
-        #details-margin{
-            margin: 10px 10px 10px 10px;
-        }
-        @media screen and (max-width: 360px) {
-            .icon-position {
-                display: flex !important;
-                justify-content:flex-start!important
-            }
-        }
-    </style>
-
+    <link rel="stylesheet" href="assets/plugins/css/marquee.css">
+    <link rel="stylesheet" href="assets/plugins/breaking/breaking.css">
     <!--Jquery-->
-    <script src="./assets/plugins/js/jquery-3.6.1.min.js"></script>
+    <script src="assets/plugins/js/jquery-3.6.1.min.js"></script>
+    <style>
+
+
+        @media only screen and (max-width: 360px) {
+
+        }
+        /*    .margin-br{*/
+        /*        margin-top: 13px;*/
+        /*    }*/
+        /*}*/
+        /*.gradbox {*/
+        /*    background-color: #E4E4E4;*/
+        /*    background-image: linear-gradient(to right, red 5%, rgba(0,0,0,0) 5%);*/
+        /*}*/
+    </style>
 </head>
 <body class="bg-light">
 <!-- Header-->
@@ -205,7 +83,7 @@
                 </a>
             </div>
             <div class="col-md-2 d-none d-md-flex justify-content-center align-items-center">
-                <a class="btn archive-icon" href="" target="_blank">
+                <a class="btn archive-icon" href="archive.html" target="_blank">
                     <small style="display: block;">
                         <i class="fas fa-coins"></i> আর্কাইভ
                     </small>
@@ -431,239 +309,365 @@
 <!--Nav mobile End-->
 
 <main class="main-contents">
+
     <div class="container">
-        <div class="row mt-2">
-            <div class="col-md-12">
-                <ul class="breadcrumb">
-                    <li>
-                        <a href="index.html">
-                            <i class="fa fa-home-alt"></i>
-                        </a>
-                    </li>
-                    <!--                    <li><a href="#">Pictures</a></li>-->
-                    <!--                    <li><a href="#">Summer 15</a></li>-->
-                    <li>ফটো গ্যালারি</li>
-                </ul>
+        <div id="breaking-news" class="position-relative mt-3">
+            <div class="breaking-title" style="width: auto;">
+                <h2><span>ব্রেকিং</span></h2>
+            </div>
+            <div class="d-flex flex-row breaking_news_content">
+                <p class="my-0" style="margin-left: 13px; font-size: 19px; width: 100%">প্রবল বৃষ্টিতেও শোলাকিয়ায় প্রবল বৃষ্টিতেও শোলাকিয়ায় প্রবল বৃষ্টিতেও শোলাকিয়ায় প্রবল বৃষ্টিতেও শোলাকিয়ায়</p>
+                <span class="btn-breaking-close" onclick="close_breaking_news()">
+                    <i class="fa fa-close"></i>
+                </span>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-9 mt-4">
-                <h2>ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</h2>
-                <div class="row">
-                    <div class="col-md-6 col-12">
-                        <p class="news-date-time mt-1">
-                            <i class="fa fa-clock"></i> ২১ নভেম্বর ২০২২, ০৯:৪৪ পিএম
-                            | আপডেট: ২২ নভেম্বর ২০২২, ০১:৩৮ পিএম
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="icon-position">
-                            <a class=" btn btn-primary btn-sm btn-floating" style="background-color: #ac2bac; margin-right: 5px" role="button" href=""> <i class="fab fa-instagram"></i></a>
-                            <a class=" btn btn-primary btn-sm btn-floating" style="background-color: blue; margin-right: 5px" role="button" href=""> <i class="fab fa-facebook"></i></a>
-                            <a class=" btn btn-primary btn-sm btn-floating" style="background-color: red; margin-right: 5px" role="button" href=""> <i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
+        <!--Breaking news start-->
+        <div class="content mt-3">
+            <div class="simple-marquee-container d-flex align-items-center">
+                <div class="marquee-sibling bg-custom-primary">
+                    <p class="d-sm-block">শিরোনাম</p>
                 </div>
-                <hr style="margin: 5px 0 12px 0;">
-
-                <div class="demo-gallery mt-4" style="width: 100%" >
-                    <ul id="lightgallery" class="list-unstyled row">
-                        <li class="col-12" data-src="1-1600.jpg" data-sub-html="<h4>ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</h4><p>কাতার বিশ্বকাপে আর্জেন্টিনার টিকে থাকার মিশনে মেক্সিকোর বিপক্ষে প্রথমার্ধে কোনও গোলের দেখা পায়নি। এমন কি গোল করার মতো কোনও সুযোগও</p>" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
-                            <a href="">
-                                <img class="img-responsive" src="1-1600.jpg" alt="Thumb-1">
-                            </a>
-                            <div class="bd-highlight"><p id="details-margin">কাতার বিশ্বকাপে আর্জেন্টিনার টিকে থাকার মিশনে মেক্সিকোর বিপক্ষে প্রথমার্ধে কোনও গোলের দেখা পায়নি। এমন কি গোল করার মতো কোনও সুযোগও তৈরি করতে পারেনি। অথচ এই অর্ধে তারা বল দখলে ছিল অনেক এগিয়ে। ৬৭ ভাগ বল ছিল তাদের দখলে। কিন্তু মাত্র ৩৩ ভাগ বল দখলে রেখে মেক্সিকো একটি গোল প্রায় পেয়েই যাচ্ছিল। কিন্তু অ‌্যএলক্সি ভেগার ফ্রি কিক আজর্জেন্টিনার গোলরক্ষক ইমিলিয়ানো মার্টিনেজ ডান দিকে ঝাঁপিয়ে পড়ে নিশ্চিত গোল রক্ষা করেন।</p></div>
-
-                        </li>
-                        <li class="col-12"  data-src="2-1600.jpg" data-sub-html="<h4>ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</h4><p>৬৭ ভাগ বল ছিল তাদের দখলে। কিন্তু মাত্র ৩৩ ভাগ বল দখলে রেখে মেক্সিকো একটি গোল প্রায় পেয়েই যাচ্ছিল।</p>" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
-                            <a href="">
-                                <img class="img-responsive" src="2-1600.jpg" alt="Thumb-2">
-                            </a>
-                            <div class="bd-highlight"><p id="details-margin">কাতার বিশ্বকাপে আর্জেন্টিনার টিকে থাকার মিশনে মেক্সিকোর বিপক্ষে প্রথমার্ধে কোনও গোলের দেখা পায়নি। এমন কি গোল করার মতো কোনও সুযোগও তৈরি করতে পারেনি। অথচ এই অর্ধে তারা বল দখলে ছিল অনেক এগিয়ে। ৬৭ ভাগ বল ছিল তাদের দখলে। কিন্তু মাত্র ৩৩ ভাগ বল দখলে রেখে মেক্সিকো একটি গোল প্রায় পেয়েই যাচ্ছিল। কিন্তু অ‌্যএলক্সি ভেগার ফ্রি কিক আজর্জেন্টিনার গোলরক্ষক ইমিলিয়ানো মার্টিনেজ ডান দিকে ঝাঁপিয়ে পড়ে নিশ্চিত গোল রক্ষা করেন।</p></div>
-                        </li>
-                        <li class="col-12"  data-src="13-1600.jpg" data-sub-html="<h4>ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</h4><p>কিন্তু মাত্র ৩৩ ভাগ বল দখলে রেখে মেক্সিকো একটি গোল প্রায় পেয়েই যাচ্ছিল। কিন্তু অ‌্যএলক্সি ভেগার ফ্রি কিক আজর্জেন্টিনার গোলরক্ষক ইমিলিয়ানো মার্টিনেজ ডান দিকে ঝাঁপিয়ে পড়ে নিশ্চিত গোল রক্ষা করেন।</p>" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
-                            <a href="">
-                                <img class="img-responsive" src="13-1600.jpg" alt="Thumb-3">
-                            </a>
-                            <div class="bd-highlight"><p id="details-margin">কাতার বিশ্বকাপে আর্জেন্টিনার টিকে থাকার মিশনে মেক্সিকোর বিপক্ষে প্রথমার্ধে কোনও গোলের দেখা পায়নি। এমন কি গোল করার মতো কোনও সুযোগও তৈরি করতে পারেনি। অথচ এই অর্ধে তারা বল দখলে ছিল অনেক এগিয়ে। ৬৭ ভাগ বল ছিল তাদের দখলে। কিন্তু মাত্র ৩৩ ভাগ বল দখলে রেখে মেক্সিকো একটি গোল প্রায় পেয়েই যাচ্ছিল। কিন্তু অ‌্যএলক্সি ভেগার ফ্রি কিক আজর্জেন্টিনার গোলরক্ষক ইমিলিয়ানো মার্টিনেজ ডান দিকে ঝাঁপিয়ে পড়ে নিশ্চিত গোল রক্ষা করেন।</p></div>
-                        </li>
-                        <li class="col-12"  data-src="4-1600.jpg" data-sub-html="<h4>ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</h4><p>কাতার বিশ্বকাপে আর্জেন্টিনার টিকে থাকার মিশনে মেক্সিকোর বিপক্ষে প্রথমার্ধে কোনও গোলের দেখা পায়নি। এমন কি গোল করার মতো কোনও সুযোগও তৈরি করতে পারেনি।</p>" data-tweet-text="share on twitter 1">
-                            <a href="">
-                                <img class="img-responsive" src="4-1600.jpg" alt="Thumb-4">
-                            </a>
-                            <div class="bd-highlight"><p id="details-margin">কাতার বিশ্বকাপে আর্জেন্টিনার টিকে থাকার মিশনে মেক্সিকোর বিপক্ষে প্রথমার্ধে কোনও গোলের দেখা পায়নি। এমন কি গোল করার মতো কোনও সুযোগও তৈরি করতে পারেনি। অথচ এই অর্ধে তারা বল দখলে ছিল অনেক এগিয়ে। ৬৭ ভাগ বল ছিল তাদের দখলে। কিন্তু মাত্র ৩৩ ভাগ বল দখলে রেখে মেক্সিকো একটি গোল প্রায় পেয়েই যাচ্ছিল। কিন্তু অ‌্যএলক্সি ভেগার ফ্রি কিক আজর্জেন্টিনার গোলরক্ষক ইমিলিয়ানো মার্টিনেজ ডান দিকে ঝাঁপিয়ে পড়ে নিশ্চিত গোল রক্ষা করেন।</p></div>
-                        </li>
+                <div class="marquee">
+                    <ul class="marquee-content-items">
+                        <li>সিলেটে বিএনপির গণসমাবেশ শুরু</li>
+                        <li>ফারদিন হত্যার ১৪ দিনেও কোনো অগ্রগতি নেই </li>
+                        <li>মিছিল নিয়ে সমাবেশ স্থলে আসছে নেতা-কর্মীরা </li>
+                        <li>বিএনপির সমাবেশ: মোবাইল নেটওয়ার্ক নেই সিলেটে </li>
+                        <li>পশ্চিমবঙ্গে ডেঙ্গু পরিস্থিতি কার্যত হাতের বাইরে </li>
                     </ul>
                 </div>
-
-
-                <!--                <div class="new-details" id="lightgallery">-->
-                <!--                    <photo responsive = "/assets/img/750x390.png, /assets/img/750x390.png, assets/img/750x390.png, assets/img/750x390.png" data-src = "750x390.png" data-sub-html = "<p>‘৫০তম আমেরিকান মিউজিক অ্যাওয়ার্ড’ সুপারস্টার মার্কিন গায়িকা টেইলর সুইফটময় হয়েছে। তিনি যে ছয়টি বিভাগে মনোনীত হয়েছেন, সবগুলো জয় করেছেন। বছরের সেরা শিল্পী, রাতটির সেরা সম্মানিত (দি নাইটস টপ অনার)ও হয়েছেন। তিনি এই এএমএ’র মোট ৪০টি পুরস্কারজয়ী।</p>">-->
-                <!--                        <a href=""><img src="assets/img/750x390.png"></a>-->
-                <!--                    </photo>-->
-
-                <!--                    <div class="description">-->
-                <!--                        <p>‘৫০তম আমেরিকান মিউজিক অ্যাওয়ার্ড’ সুপারস্টার মার্কিন গায়িকা টেইলর সুইফটময় হয়েছে। তিনি যে ছয়টি বিভাগে মনোনীত হয়েছেন, সবগুলো জয় করেছেন। বছরের সেরা শিল্পী, রাতটির সেরা সম্মানিত (দি নাইটস টপ অনার)ও হয়েছেন। তিনি এই এএমএ’র মোট ৪০টি পুরস্কারজয়ী।</p>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-                <!--                <hr style="margin: -10px 0 12px 0;">-->
-
             </div>
-            <div class="col-md-3 d-flex flex-column mt-4">
-                <div class="section-heading d-flex flex-column">
-                    <div class="section-heading-underline"></div>
-                    <p class="fw-bold custom-font-sm"> আরও</p>
+        </div>
+        <!--Breaking news end-->
+    </div>
+
+    <!--Media Gallery start-->
+    <div class="mt-4 bg-custom-primary-dark py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <div class="section-heading d-flex flex-column">
+                        <div class="section-heading-underline"></div>
+                        <a href="photo-gallery.html">
+                            <h2 class="fw-bold text-white">ফটো গ্যালারি</h2>
+                        </a>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-md-6 mt-2">
+                            <a class="image-box d-flex" href="photo-gallery-details.html">
+                                <img class="img-fluid" src="https://www.dhakaprokash24.com/media/photoAlbum/2022November/goal4-20221125034242.jpg" alt="গোল অব দ্য ডে, শট অব দ্য ডে">
+                                <div class="overlay">
+                                    <b><p class="img-title">গোল অব দ্য ডে, শট অব দ্য ডে</p></b>
+                                </div>
+                                <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                            </a>
+                        </div>
+                        <div class="col-md-3 d-flex flex-column mt-2">
+                            <a class="image-box d-flex" href="">
+                                <img class="img-fluid" src="https://www.dhakaprokash24.com/media/photoAlbum/2022November/goal4-20221125034242.jpg" alt="গোল অব দ্য ডে, শট অব দ্য ডে">
+                                <div class="overlay">
+                                    <b><p class="img-title-small">গোল অব দ্য ডে, শট অব দ্য ডে</p></b>
+                                </div>
+                                <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                            </a>
+                            <a class="image-box d-flex mt-3" href="">
+                                <img class="img-fluid" src="https://www.dhakaprokash24.com/media/photoAlbum/2022November/goal4-20221125034242.jpg" alt="গোল অব দ্য ডে, শট অব দ্য ডে">
+                                <div class="overlay">
+                                    <b><p class="img-title-small">গোল অব দ্য ডে, শট অব দ্য ডে</p></b>
+                                </div>
+                                <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                            </a>
+                        </div>
+                        <div class="col-md-3 d-flex flex-column mt-2">
+                            <a class="image-box d-flex" href="">
+                                <img class="img-fluid" src="https://www.dhakaprokash24.com/media/photoAlbum/2022November/goal4-20221125034242.jpg" alt="গোল অব দ্য ডে, শট অব দ্য ডে">
+                                <div class="overlay">
+                                    <b><p class="img-title-small">গোল অব দ্য ডে, শট অব দ্য ডে</p></b>
+                                </div>
+                                <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                            </a>
+                            <a class="image-box d-flex mt-3" href="">
+                                <img class="img-fluid" src="https://www.dhakaprokash24.com/media/photoAlbum/2022November/goal4-20221125034242.jpg" alt="গোল অব দ্য ডে, শট অব দ্য ডে">
+                                <div class="overlay">
+                                    <b><p class="img-title-small">গোল অব দ্য ডে, শট অব দ্য ডে</p></b>
+                                </div>
+                                <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <a href="">
-                    <div class="row border-bottom border-1 mb-2 horizontal-news-sm">
-                        <div class="col-md-6 col-sm-6 col-6 px-md-0">
-                            <img class="img-fluid" src="assets/img/750x390.png">
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-6 special-top-other-contents-title">
-                            <p class="">ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="row border-bottom border-1 mb-2 horizontal-news-sm">
-                        <div class="col-md-6 col-sm-6 col-6 px-md-0">
-                            <img class="img-fluid" src="assets/img/750x390.png">
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-6 special-top-other-contents-title">
-                            <p class="">ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="row border-bottom border-1 mb-2 horizontal-news-sm">
-                        <div class="col-md-6 col-sm-6 col-6 px-md-0">
-                            <img class="img-fluid" src="assets/img/750x390.png">
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-6 special-top-other-contents-title">
-                            <p class="">ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="row border-bottom border-1 mb-2 horizontal-news-sm">
-                        <div class="col-md-6 col-sm-6 col-6 px-md-0">
-                            <img class="img-fluid" src="assets/img/750x390.png">
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-6 special-top-other-contents-title">
-                            <p class="">ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="row border-bottom border-1 mb-2 horizontal-news-sm">
-                        <div class="col-md-6 col-sm-6 col-6 px-md-0">
-                            <img class="img-fluid" src="assets/img/750x390.png">
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-6 special-top-other-contents-title">
-                            <p class="">ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="row border-bottom border-1 mb-2 horizontal-news-sm">
-                        <div class="col-md-6 col-sm-6 col-6 px-md-0">
-                            <img class="img-fluid" src="assets/img/750x390.png">
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-6 special-top-other-contents-title">
-                            <p class="">ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="row border-bottom border-1 mb-2 horizontal-news-sm">
-                        <div class="col-md-6 col-sm-6 col-6 px-md-0">
-                            <img class="img-fluid" src="assets/img/750x390.png">
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-6 special-top-other-contents-title">
-                            <p class="">ম্যাজিক মেসি আর ফার্নান্দেজ ঝলকে আর্জেন্টিনার জয়</p>
-                        </div>
-                    </div>
-                </a>
-                <a class="btn btn-section-more" href="">আরও</a>
             </div>
         </div>
     </div>
+    <!--Media Gallery end-->
 
-    <!--    <div class="mt-3 bg-custom-secondary-light py-4">-->
-    <!--        <div class="container">-->
-    <!--            <div class="row">-->
-    <!--                <div class="section-heading d-flex flex-column">-->
-    <!--                    <div class="section-heading-underline"></div>-->
-    <!--                    <p class="fw-bold custom-font-md">আরও পড়ুন</p>-->
-    <!--                </div>-->
-    <!--                <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-2">-->
-    <!--                    <a href="">-->
-    <!--                        <img class="img-fluid" src="assets/img/750x390.png">-->
-    <!--                    </a>-->
-    <!--                    <a class="py-0" href="">-->
-    <!--                        <p class="mt-2 custom-font-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>-->
-    <!--                    </a>-->
-    <!--                </div>-->
-    <!--                <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-2">-->
-    <!--                    <a href="">-->
-    <!--                        <img class="img-fluid" src="assets/img/750x390.png">-->
-    <!--                    </a>-->
-    <!--                    <a class="py-0" href="">-->
-    <!--                        <p class="mt-2 custom-font-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>-->
-    <!--                    </a>-->
-    <!--                </div>-->
-    <!--                <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-2">-->
-    <!--                    <a href="">-->
-    <!--                        <img class="img-fluid" src="assets/img/750x390.png">-->
-    <!--                    </a>-->
-    <!--                    <a class="py-0" href="">-->
-    <!--                        <p class="mt-2 custom-font-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>-->
-    <!--                    </a>-->
-    <!--                </div>-->
-    <!--                <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-2">-->
-    <!--                    <a href="">-->
-    <!--                        <img class="img-fluid" src="assets/img/750x390.png">-->
-    <!--                    </a>-->
-    <!--                    <a class="py-0" href="">-->
-    <!--                        <p class="mt-2 custom-font-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>-->
-    <!--                    </a>-->
-    <!--                </div>-->
-    <!--                <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-3">-->
-    <!--                    <a href="">-->
-    <!--                        <img class="img-fluid" src="assets/img/750x390.png">-->
-    <!--                    </a>-->
-    <!--                    <a class="py-0" href="">-->
-    <!--                        <p class="mt-2 custom-font-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>-->
-    <!--                    </a>-->
-    <!--                </div>-->
-    <!--                <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-3">-->
-    <!--                    <a href="">-->
-    <!--                        <img class="img-fluid" src="assets/img/750x390.png">-->
-    <!--                    </a>-->
-    <!--                    <a class="py-0" href="">-->
-    <!--                        <p class="mt-2 custom-font-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>-->
-    <!--                    </a>-->
-    <!--                </div>-->
-    <!--                <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-3">-->
-    <!--                    <a href="">-->
-    <!--                        <img class="img-fluid" src="assets/img/750x390.png">-->
-    <!--                    </a>-->
-    <!--                    <a class="py-0" href="">-->
-    <!--                        <p class="mt-2 custom-font-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>-->
-    <!--                    </a>-->
-    <!--                </div>-->
-    <!--                <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-3">-->
-    <!--                    <a href="">-->
-    <!--                        <img class="img-fluid" src="assets/img/750x390.png">-->
-    <!--                    </a>-->
-    <!--                    <a class="py-0" href="">-->
-    <!--                        <p class="mt-2 custom-font-md py-0">আমানতের ৮.২৫ শতাংশই খেলাপি </p>-->
-    <!--                    </a>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
+    <div class="container">
+        <!--National Category-->
+        <div class="row mt-5">
+            <div class="section-heading d-flex flex-column">
+                <div class="section-heading-underline-lg"></div>
+                <p class="fw-bold custom-font-md">জাতীয়</p>
+            </div>
+            <div class="col-md-4 d-flex flex-column">
+                <a class="image-box d-flex" href="photo-gallery-details.html">
+                    <img class="img-fluid" src="assets/img/zubolig-20221113213009.jpg">
+                    <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                </a>
+                <a class="py-0" href="photo-gallery-details.html">
+                    <p class="mt-2 custom-font-lg py-0">এক নজরে যুব মহাসমাবেশের খণ্ডচিত্র</p>
+                </a>
+                <div class="lead_description">
+                    <p>জনপ্রিয় মডেল অভিনেত্রী বিদ্যা সিনহা মিম ভীষণ প্রকৃতিপ্রেমী। অবসর পেলেই ছুটে যান প্রকৃতির কাছে। এবার গেলেন কাশ ফুলের সান্নিধ্যে।</p>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-4 col-6">
+                        <a class="image-box d-flex" href="photo-gallery-details.html">
+                            <img class="img-fluid" src="assets/img/zubolig-20221113213009.jpg" alt="">
+                            <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                        </a>
+                        <a class="py-0" href="photo-gallery-details.html">
+                            <p class="mt-2 custom-font-md py-0">এক নজরে যুব মহাসমাবেশের খণ্ডচিত্র</p>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <a class="image-box d-flex" href="photo-gallery-details.html">
+                            <img class="img-fluid" src="assets/img/zubolig-20221113213009.jpg" alt="">
+                            <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                        </a>
+                        <a class="py-0" href="photo-gallery-details.html">
+                            <p class="mt-2 custom-font-md py-0">এক নজরে যুব মহাসমাবেশের খণ্ডচিত্র</p>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <a class="image-box d-flex" href="photo-gallery-details.html">
+                            <img class="img-fluid" src="assets/img/zubolig-20221113213009.jpg" alt="">
+                            <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                        </a>
+                        <a class="py-0" href="photo-gallery-details.html">
+                            <p class="mt-2 custom-font-md py-0">এক নজরে যুব মহাসমাবেশের খণ্ডচিত্র</p>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <a class="image-box d-flex" href="photo-gallery-details.html">
+                            <img class="img-fluid" src="assets/img/zubolig-20221113213009.jpg" alt="">
+                            <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                        </a>
+                        <a class="py-0" href="photo-gallery-details.html">
+                            <p class="mt-2 custom-font-md py-0">এক নজরে যুব মহাসমাবেশের খণ্ডচিত্র</p>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <a class="image-box d-flex" href="photo-gallery-details.html">
+                            <img class="img-fluid" src="assets/img/zubolig-20221113213009.jpg" alt="">
+                            <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                        </a>
+                        <a class="py-0" href="photo-gallery-details.html">
+                            <p class="mt-2 custom-font-md py-0">এক নজরে যুব মহাসমাবেশের খণ্ডচিত্র</p>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <a class="image-box d-flex" href="photo-gallery-details.html">
+                            <img class="img-fluid" src="assets/img/zubolig-20221113213009.jpg" alt="">
+                            <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                        </a>
+                        <a class="py-0" href="photo-gallery-details.html">
+                            <p class="mt-2 custom-font-md py-0">এক নজরে যুব মহাসমাবেশের খণ্ডচিত্র</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--National Category end-->
+
+        <!--Entertainment Category-->
+        <div class="row mt-5">
+            <div class="section-heading d-flex flex-column">
+                <div class="section-heading-underline-lg"></div>
+                <p class="fw-bold custom-font-md">বিনোদন</p>
+            </div>
+
+            <div class="col-md-3 d-flex flex-column mt-2">
+                <div class="single-gallery">
+                    <a class="image-box d-flex" href="photo-gallery-details.html">
+                        <img class="img-fluid" src="assets/img/mim-0-20221008155227.jpg">
+                        <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                    </a>
+                    <a class="py-0" href="photo-gallery-details.html">
+                        <p class="mt-2 custom-font-md py-0">কাশবনে মিম</p>
+                    </a>
+                </div>
+                <div class="single-gallery">
+                    <a class="image-box d-flex" href="photo-gallery-details.html">
+                        <img class="img-fluid" src="assets/img/mim-0-20221008155227.jpg">
+                        <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                    </a>
+                    <a class="py-0" href="photo-gallery-details.html">
+                        <p class="mt-2 custom-font-md py-0">কাশবনে মিম</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 d-flex flex-column mt-2">
+                <a class="image-box d-block" href="photo-gallery-details.html">
+                    <img class="img-fluid" src="assets/img/750x390.png">
+                    <div class="overlay">
+                        <b><p class="img-title">কাশবনে মিম</p></b>
+                    </div>
+                    <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                </a>
+                <div class="lead_description mt-3">
+                    <p>জনপ্রিয় মডেল অভিনেত্রী বিদ্যা সিনহা মিম ভীষণ প্রকৃতিপ্রেমী। অবসর পেলেই ছুটে যান প্রকৃতির কাছে। এবার গেলেন কাশ ফুলের সান্নিধ্যে।</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 d-flex flex-column mt-2">
+                <div class="single-gallery">
+                    <a class="image-box d-flex" href="photo-gallery-details.html">
+                        <img class="img-fluid" src="assets/img/mim-0-20221008155227.jpg">
+                        <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                    </a>
+                    <a class="py-0" href="photo-gallery-details.html">
+                        <p class="mt-2 custom-font-md py-0">কাশবনে মিম</p>
+                    </a>
+                </div>
+                <div class="single-gallery">
+                    <a class="image-box d-flex" href="photo-gallery-details.html">
+                        <img class="img-fluid" src="assets/img/mim-0-20221008155227.jpg">
+                        <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                    </a>
+                    <a class="py-0" href="photo-gallery-details.html">
+                        <p class="mt-2 custom-font-md py-0">কাশবনে মিম</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-2">
+                    <a class="image-box d-flex" href="photo-gallery-details.html">
+                        <img class="img-fluid" src="assets/img/mim-0-20221008155227.jpg">
+                        <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                    </a>
+                    <a class="py-0" href="photo-gallery-details.html">
+                        <p class="mt-2 custom-font-md py-0">কাশবনে মিম</p>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-2">
+                    <a class="image-box d-flex" href="photo-gallery-details.html">
+                        <img class="img-fluid" src="assets/img/mim-0-20221008155227.jpg">
+                        <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                    </a>
+                    <a class="py-0" href="photo-gallery-details.html">
+                        <p class="mt-2 custom-font-md py-0">কাশবনে মিম</p>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-2">
+                    <a class="image-box d-flex" href="photo-gallery-details.html">
+                        <img class="img-fluid" src="assets/img/mim-0-20221008155227.jpg">
+                        <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                    </a>
+                    <a class="py-0" href="photo-gallery-details.html">
+                        <p class="mt-2 custom-font-md py-0">কাশবনে মিম</p>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-2">
+                    <a class="image-box d-flex" href="photo-gallery-details.html">
+                        <img class="img-fluid" src="assets/img/mim-0-20221008155227.jpg">
+                        <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                    </a>
+                    <a class="py-0" href="photo-gallery-details.html">
+                        <p class="mt-2 custom-font-md py-0">কাশবনে মিম</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--Entertainment Category end-->
+
+
+        <!--Sports Category-->
+        <div class="row mt-5">
+            <div class="section-heading d-flex flex-column">
+                <div class="section-heading-underline-lg"></div>
+                <p class="fw-bold custom-font-md">খেলাধুলা</p>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-2">
+                <a class="image-box d-flex" href="photo-gallery-details.html">
+                    <img class="img-fluid" src="assets/img/quarter-20221207141507.jpg" alt="">
+                    <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                </a>
+                <a class="py-0" href="photo-gallery-details.html">
+                    <p class="mt-2 custom-font-md py-0">শেষ আটে কে কার মুখোমুখি</p>
+                </a>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-2">
+                <a class="image-box d-flex" href="photo-gallery-details.html">
+                    <img class="img-fluid" src="assets/img/quarter-20221207141507.jpg" alt="">
+                    <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                </a>
+                <a class="py-0" href="photo-gallery-details.html">
+                    <p class="mt-2 custom-font-md py-0">শেষ আটে কে কার মুখোমুখি</p>
+                </a>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-2">
+                <a class="image-box d-flex" href="photo-gallery-details.html">
+                    <img class="img-fluid" src="assets/img/quarter-20221207141507.jpg" alt="">
+                    <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                </a>
+                <a class="py-0" href="photo-gallery-details.html">
+                    <p class="mt-2 custom-font-md py-0">শেষ আটে কে কার মুখোমুখি</p>
+                </a>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-2">
+                <a class="image-box d-flex" href="photo-gallery-details.html">
+                    <img class="img-fluid" src="assets/img/quarter-20221207141507.jpg" alt="">
+                    <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                </a>
+                <a class="py-0" href="photo-gallery-details.html">
+                    <p class="mt-2 custom-font-md py-0">শেষ আটে কে কার মুখোমুখি</p>
+                </a>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-2">
+                <a class="image-box d-flex" href="photo-gallery-details.html">
+                    <img class="img-fluid" src="assets/img/quarter-20221207141507.jpg" alt="">
+                    <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                </a>
+                <a class="py-0" href="photo-gallery-details.html">
+                    <p class="mt-2 custom-font-md py-0">শেষ আটে কে কার মুখোমুখি</p>
+                </a>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-2">
+                <a class="image-box d-flex" href="photo-gallery-details.html">
+                    <img class="img-fluid" src="assets/img/quarter-20221207141507.jpg" alt="">
+                    <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                </a>
+                <a class="py-0" href="photo-gallery-details.html">
+                    <p class="mt-2 custom-font-md py-0">শেষ আটে কে কার মুখোমুখি</p>
+                </a>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-2">
+                <a class="image-box d-flex" href="photo-gallery-details.html">
+                    <img class="img-fluid" src="assets/img/quarter-20221207141507.jpg" alt="">
+                    <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                </a>
+                <a class="py-0" href="photo-gallery-details.html">
+                    <p class="mt-2 custom-font-md py-0">শেষ আটে কে কার মুখোমুখি</p>
+                </a>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 d-flex flex-column mt-2">
+                <a class="image-box d-flex" href="photo-gallery-details.html">
+                    <img class="img-fluid" src="assets/img/quarter-20221207141507.jpg" alt="">
+                    <span class="image-icon"><i class="fa-solid fa-images"></i></span>
+                </a>
+                <a class="py-0" href="photo-gallery-details.html">
+                    <p class="mt-2 custom-font-md py-0">শেষ আটে কে কার মুখোমুখি</p>
+                </a>
+            </div>
+        </div>
+        <!--Sports Category End-->
+    </div>
 
     <!--Footer start-->
     <footer>
@@ -750,25 +754,30 @@
 <!--Scripts-->
 <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
 <script src="./assets/plugins/fontawesome/js/all.js"></script>
-<!--<script src="./assets/plugins/js/index.js"></script>-->
+<script src="./assets/plugins/js/index.js"></script>
+<script src="./assets/plugins/js/marquee.js"></script>
 
-<!--Add this button-->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-637c81f3f806a8c7"></script>
+<script>
+    $(function () {
+        let options = {
+            autostart: true,
+            property: 'value',
+            onComplete: null,
+            duration: 20000,
+            padding: 10,
+            marquee_class: '.marquee',
+            container_class: '.simple-marquee-container',
+            sibling_class: 0,
+            hover: true,
+            velocity: 0.1,
+            direction: 'left'
+        }
 
-<!--Photo Gallery-->
-<script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
-<script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
-<script src="https://cdn.rawgit.com/sachinchoolur/lg-pager.js/master/dist/lg-pager.js"></script>
-<script src="https://cdn.rawgit.com/sachinchoolur/lg-autoplay.js/master/dist/lg-autoplay.js"></script>
-<script src="https://cdn.rawgit.com/sachinchoolur/lg-fullscreen.js/master/dist/lg-fullscreen.js"></script>
-<script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
-<script src="https://cdn.rawgit.com/sachinchoolur/lg-hash.js/master/dist/lg-hash.js"></script>
-<script src="https://cdn.rawgit.com/sachinchoolur/lg-share.js/master/dist/lg-share.js"></script>
-<script src="./assets/plugins/photo-gallery/lg-thumbnail.min.js"></script>
-<script type="text/javascript">
-    lightGallery(document.getElementById('lightgallery'),{
-        thumbnail: true
+        $('.simple-marquee-container').SimpleMarquee(options);
+
+        // $('.simple-marquee-container').SimpleMarquee();
     });
+
 </script>
 <!--Scripts End-->
 </body>
