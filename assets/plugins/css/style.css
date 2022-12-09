@@ -665,7 +665,7 @@ ul.breadcrumb li+li:before {
     line-height: 24px;
 }
 
-.single-archive-item:hover a {
+.single-archive-item h3:hover > a {
     color: red;
 }
 
@@ -673,7 +673,7 @@ ul.breadcrumb li+li:before {
     color: #016938;
 }
 
-.single-archive-item:hover small > a {
+.single-archive-item small > a:hover {
     color: #f15922;
     text-decoration: underline!important;
 }
